@@ -1,0 +1,2769 @@
+[33mcommit e51f084f19b4ae3ba39ee292bb2d949a9a027b93[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Jeremiah Ikechukwu <jegbune1@gmail.com>
+Date:   Fri Nov 18 14:36:58 2022 +0100
+
+    Updated restore
+
+[1mdiff --git a/general.css b/general.css[m
+[1mindex febaf69..cb34ade 100644[m
+[1m--- a/general.css[m
+[1m+++ b/general.css[m
+[36m@@ -9,6 +9,8 @@[m [mbody{[m
+     padding: 0;[m
+ 	margin-top: 0;[m
+     font-family: Roboto, sans-serif;[m
+[32m+[m	[32mbackground-color: black;[m
+[32m+[m	[32mcolor: white;[m
+ [m
+ }[m
+ .home{[m
+
+[33mcommit d9c858f14f6273da70ccb1156ece2138b47c80d3[m
+Author: Jeremiah Ikechukwu <jegbune1@gmail.com>
+Date:   Fri Nov 18 14:27:06 2022 +0100
+
+    first commit - committing all files to my repository
+
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4f85d0b[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m#ignore all .txt files[m
+[32m+[m[32m*.txt[m
+\ No newline at end of file[m
+[1mdiff --git a/Twitter-clone.html b/Twitter-clone.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cb2db41[m
+[1m--- /dev/null[m
+[1m+++ b/Twitter-clone.html[m
+[36m@@ -0,0 +1,90 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Document</title>[m
+[32m+[m[32m<style>[m
+[32m+[m[32m    *{box-sizing: border-box;[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    overflow:hidden[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.first{[m
+[32m+[m[32m    width: 55px;[m
+[32m+[m[32m    height: 55px;[m
+[32m+[m[32m    background: #2ecc71;[m
+[32m+[m[32m    position:absolute;[m
+[32m+[m[32m    top:50%;[m
+[32m+[m[32m    left:40%;[m
+[32m+[m[32m    transform:translate(-50%,-50%);[m
+[32m+[m[32m    outline:none;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    cursor:pointer;[m
+[32m+[m[32m    box-shadow: 0 0 0 0 #2ecc71;[m
+[32m+[m[32m    transition: 0.9s;[m
+[32m+[m[32m    border: 3px solid white;[m
+[32m+[m[32m    z-index: 1;[m
+[32m+[m[32m}[m
+[32m+[m[32m.first:focus{[m
+[32m+[m[32m    box-shadow: 0 0 0 1000px #2ecc71;[m
+[32m+[m[32m    z-index: -1000px;[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.second{[m
+[32m+[m[32m    width: 55px;[m
+[32m+[m[32m    height: 55px;[m
+[32m+[m[32m    background: #2c3e50;[m
+[32m+[m[32m    position:absolute;[m
+[32m+[m[32m    top:50%;[m
+[32m+[m[32m    left:50%;[m
+[32m+[m[32m    transform:translate(-50%,-50%);[m
+[32m+[m[32m    outline:none;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    cursor:pointer;[m
+[32m+[m[32m    box-shadow: 0 0 0 0 #2c3e50;[m
+[32m+[m[32m    transition: 0.9s;[m
+[32m+[m[32m    z-index: 1;[m
+[32m+[m[32m    border: 3px solid white;[m
+[32m+[m[32m}[m
+[32m+[m[32m.second:focus{[m
+[32m+[m[32m    box-shadow: 0 0 0 1000px #2c3e50;[m
+[32m+[m[32m    z-index: -1000px;[m[41m  [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.third{[m
+[32m+[m[32m    width: 55px;[m
+[32m+[m[32m    height: 55px;[m
+[32m+[m[32m    background: #9b59b6;[m
+[32m+[m[32m    position:absolute;[m
+[32m+[m[32m    top:50%;[m
+[32m+[m[32m    left:60%;[m
+[32m+[m[32m    transform:translate(-50%,-50%);[m
+[32m+[m[32m    outline:none;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    cursor:pointer;[m
+[32m+[m[32m    box-shadow: 0 0 0 0 #2ecc71;[m
+[32m+[m[32m    transition: 0.9s;[m
+[32m+[m[32m    z-index: 1;[m
+[32m+[m[32m    border: 3px solid white;[m[41m        [m
+[32m+[m[32m}[m
+[32m+[m[32m.third:focus{[m
+[32m+[m[32m    box-shadow: 0 0 0 1000px #2ecc71;[m
+[32m+[m[32m    z-index: -1000px;[m[41m  [m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m[32m</style>[m
+[32m+[m[32m</head>[m
+[32m+[m
+[32m+[m[32m<body>[m
+[32m+[m[41m    [m
+[32m+[m[32m    <button class="first"></button>[m
+[32m+[m[32m    <button class="second"></button>[m
+[32m+[m[32m    <button class="third"></button>[m
+[32m+[m[41m    [m
+[32m+[m
+[32m+[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/aside.css b/aside.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a7e51b1[m
+[1m--- /dev/null[m
+[1m+++ b/aside.css[m
+[36m@@ -0,0 +1,141 @@[m
+[32m+[m[32m.aside-container{[m
+[32m+[m[32m    width: 310px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.search-container{[m
+[32m+[m[32m    position:fixed;[m
+[32m+[m[32m    margin-bottom: 20px;[m
+[32m+[m[32m    top:0px;[m
+[32m+[m[32m    background-color: white;[m
+[32m+[m[32m    z-index: 100;[m
+[32m+[m[32m    padding:5px 0px ;[m
+[32m+[m[32m}[m
+[32m+[m[32m.search{[m
+[32m+[m[32m    width:260px;[m
+[32m+[m[32m    padding:10px 0px 10px 50px;[m
+[32m+[m[32m    background-color: rgba(80, 120, 120, 0.03);[m
+[32m+[m[32m    border-top-left-radius: 20px;[m
+[32m+[m[32m    border-top-right-radius: 20px;[m
+[32m+[m[32m    border-bottom-left-radius: 20px;[m
+[32m+[m[32m    border-bottom-right-radius: 20px;[m
+[32m+[m[32m    border:none;[m
+[32m+[m[32m    outline-color:rgb(171, 212, 239);[m
+[32m+[m[32m    outline-width: 1px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.search::placeholder{[m
+[32m+[m[32m    padding-left: 0px;[m
+[32m+[m[32m    font-weight: 600;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m    .search-icon-container{[m
+[32m+[m[32m    position:absolute;[m
+[32m+[m[32m    width:15px;[m
+[32m+[m[32m    top:16px;[m
+[32m+[m[32m    left:20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.trend{[m
+[32m+[m[32m    background-color: rgba(80, 120, 120, 0.03);[m
+[32m+[m[32m    border-top-left-radius: 15px;[m
+[32m+[m[32m    border-top-right-radius: 15px;[m
+[32m+[m[32m    border-bottom-left-radius: 15px;[m
+[32m+[m[32m    border-bottom-right-radius: 15px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.top-trend{ padding: 10px;}[m
+[32m+[m[32m.top-trend:hover{[m
+[32m+[m[32m    background-color: rgba(128, 128, 128, 0.245);[m
+[32m+[m[32m}[m
+[32m+[m[32m.trend-heading{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m    color:rgb(100, 100, 100);[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m[32m.trend-topic{[m
+[32m+[m[32m    font-size: 12px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.trend-more{[m
+[32m+[m[32m    width:12px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.trend-author{[m
+[32m+[m[32m    font-size: 13px;[m
+[32m+[m[32m    font-weight: 600;[m
+[32m+[m[32m    margin-bottom: 5px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.trends{[m
+[32m+[m[32m    font-size: 20px;[m
+[32m+[m[32m    font-weight: 700;[m
+[32m+[m[32m    padding:10px;[m
+[32m+[m[32m    transition: 1.1s;[m
+[32m+[m[32m}[m
+[32m+[m[32m.trend-stats{[m
+[32m+[m[32m    font-size: 12px;[m
+[32m+[m[32m    color: rgb(100, 100, 100);[m
+[32m+[m[32m}[m
+[32m+[m[32m.trend-caption{[m
+[32m+[m[32m    color: rgb(100, 100, 100);[m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.suggest-follower{[m
+[32m+[m[32m    width: 300px;[m
+[32m+[m[32m    padding: 5px;[m
+[32m+[m[32m    margin-top: 20px;[m
+[32m+[m[32m    position:sticky;[m
+[32m+[m[32m    top: 0;[m
+[32m+[m[32m    background-color: rgba(80, 120, 120, 0.03);[m
+[32m+[m[32m    border-top-left-radius: 15px;[m
+[32m+[m[32m    border-top-right-radius: 15px;[m
+[32m+[m[32m    border-bottom-left-radius: 15px;[m
+[32m+[m[32m    border-bottom-right-radius: 15px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.who{[m
+[32m+[m[32m    font-weight: 800;[m
+[32m+[m[32m    padding: 5px;[m[41m  [m
+[32m+[m[32m    margin-bottom:5px;[m[41m  [m
+[32m+[m[32m}[m
+[32m+[m[32m.follow{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: row;[m
+[32m+[m[32m    padding: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.follow:hover{[m
+[32m+[m[32m    background-color: rgba(128, 128, 128, 0.245);[m
+[32m+[m[32m}[m
+[32m+[m[32m.follow-pics{[m
+[32m+[m[32m    width:40px;[m
+[32m+[m[32m    height:50px;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    margin-right: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.follow-pic{[m
+[32m+[m[32m    width:40px;[m
+[32m+[m[32m    height:40px;[m
+[32m+[m[32m    border-radius: 50%;[m[41m [m
+[32m+[m[32m}[m
+[32m+[m[32m.follower-name{[m
+[32m+[m[32m    flex:1[m
+[32m+[m[32m}[m
+[32m+[m[32m.follow-button{[m
+[32m+[m[32m    background-color: black;[m
+[32m+[m[32m    padding: 3px 15px;[m
+[32m+[m[32m    height:18px;[m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m    font-weight: 600;[m
+[32m+[m[32m    color:white;[m
+[32m+[m[32m    border-top-left-radius: 12px;[m
+[32m+[m[32m    border-bottom-left-radius: 12px;[m
+[32m+[m[32m    border-top-right-radius: 12px;[m
+[32m+[m[32m    border-bottom-right-radius: 12px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m@media (max-width:800px){[m
+[32m+[m[32m    aside{[m
+[32m+[m[32m        display:none;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .aside-container{[m
+[32m+[m[32m        display:none[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/general.css b/general.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..febaf69[m
+[1m--- /dev/null[m
+[1m+++ b/general.css[m
+[36m@@ -0,0 +1,382 @@[m
+[32m+[m
+[32m+[m	[32mp{[m
+[32m+[m[32m    padding:0;[m
+[32m+[m[32m    margin:0;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32mbody{[m
+[32m+[m	[32mbox-sizing: border-box;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m	[32mmargin-top: 0;[m
+[32m+[m[32m    font-family: Roboto, sans-serif;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.home{[m
+[32m+[m[32m    display:flex;[m
+[32m+[m[32m    flex-direction: row;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m	[32mjustify-content: space-between;[m
+[32m+[m	[32mmargin-right: 668px;[m
+[32m+[m	[32mcolor:#0f1419;[m
+[32m+[m	[32mposition: fixed;[m
+[32m+[m	[32mtop:0;[m
+[32m+[m	[32mwidth: calc(100% - 668px);[m
+[32m+[m	[32mmin-width: 528px;[m
+[32m+[m	[32mmargin-left:279px;[m
+[32m+[m	[32mheight: 53px;[m
+[32m+[m	[32mfont-size: 27px;[m
+[32m+[m	[32mz-index: 100;[m
+[32m+[m	[32mpadding:0px;[m
+[32m+[m	[32mborder-right: 1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m	[32mflex-shrink: 0;[m
+[32m+[m	[32m/* background-color: red; */[m
+[32m+[m	[32mbackground-color: rgba(255, 255, 255, 0.985);[m
+[32m+[m[32m}[m
+[32m+[m[32m/* .p-home-container{[m
+[32m+[m
+[32m+[m[32m} */[m
+[32m+[m[32m.p-home{[m
+[32m+[m[32m    font-size: 17px;[m
+[32m+[m[32m    font-weight:700;[m
+[32m+[m	[32mflex: 1;[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m	[32mmargin-left:10px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.top-tweet-icon{[m
+[32m+[m[32m    width: 18px;[m
+[32m+[m[32m    height: 18px;[m
+[32m+[m	[32mmargin-right: 15px;[m
+[32m+[m	[32mdisplay:flex;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.section{[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mmargin-top: 53px;[m
+[32m+[m	[32mmargin-left: 279px;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.middle-section{[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mflex-direction: column;[m
+[32m+[m	[32mpadding-bottom: 20px;[m
+[32m+[m	[32mwidth: calc(100% - 389px);[m
+[32m+[m	[32mmin-width: 528px;[m
+[32m+[m	[32mpadding-left: 0px;[m
+[32m+[m	[32mmargin-right: 30px;[m
+[32m+[m	[32mborder-right: 1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.post-img{[m
+[32m+[m	[32mdisplay:flex;[m
+[32m+[m	[32mflex-direction: column;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m	[32mmargin-right: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.img-thread{[m
+[32m+[m	[32mdisplay:flex;[m
+[32m+[m	[32mborder:1px;[m
+[32m+[m	[32mheight: 50px;[m
+[32m+[m	[32mflex:1;[m
+[32m+[m	[32mwidth: 1px;[m
+[32m+[m	[32mmargin:2px;[m
+[32m+[m	[32mbackground-color: rgba(200, 200, 200, 0.293);[m
+[32m+[m	[32mborder: 0px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m}[m
+[32m+[m[32m.profile-img{[m
+[32m+[m[32m    width: 48px;[m
+[32m+[m[32m    height: 48px;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m}[m
+[32m+[m[32m.profile-img-1{[m
+[32m+[m[32m    width: 40px;[m
+[32m+[m[32m    height: 40px;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m}[m
+[32m+[m[32m.audience{[m
+[32m+[m[32m    margin:0;[m
+[32m+[m[32m    padding-bottom: 12px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.select-audience{[m
+[32m+[m[32m    font-weight: bold;[m
+[32m+[m[32m    color:rgb(29, 155, 240);[m
+[32m+[m[32m    padding: 2px 1px;[m
+[32m+[m[32m    border:none;[m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m    outline: none;[m
+[32m+[m[32m    border: 1px solid rgb(29, 156, 240);[m
+[32m+[m[32m    box-shadow: 0px 0px 0px 0px rgb(0, 0, 0);[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    border-top-left-radius: 12px;[m
+[32m+[m[32m    border-top-right-radius: 12px;[m
+[32m+[m[32m    border-bottom-left-radius: 12px;[m
+[32m+[m[32m    border-bottom-right-radius: 12px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post{[m
+[32m+[m	[32mwidth: 80%;[m
+[32m+[m	[32mresize:none;[m
+[32m+[m	[32mheight: 24px;[m
+[32m+[m	[32moverflow-y: hidden;[m
+[32m+[m	[32mfont-size: 20px;[m
+[32m+[m[32m    border:none;[m
+[32m+[m	[32moutline: none;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-container{[m
+[32m+[m[32m    padding: 11px 2px;[m
+[32m+[m	[32mflex:1;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-1{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: row;[m
+[32m+[m	[32mborder-bottom: 1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m	[32mpadding-left: 20px;[m
+[32m+[m	[32mpadding-top: 25px;[m
+[32m+[m	[32mmargin-bottom: 12px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.top{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    flex: 1;[m
+[32m+[m	[32mmargin-left: 10px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.icon-post-container{[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mjustify-content: space-between;[m
+[32m+[m	[32mwidth: 240px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-icon-container{[m
+[32m+[m	[32mposition: relative;[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mjustify-content: center;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m	[32mpadding: 10px;[m
+[32m+[m	[32mtransition:0.08s[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-icon{[m
+[32m+[m	[32mwidth: 18px;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-icon-container:hover{[m
+[32m+[m	[32mpadding: 10px;[m
+[32m+[m	[32mborder-radius: 50%;[m
+[32m+[m	[32mbackground-color: rgba(29, 156, 240, 0.122)[m
+[32m+[m[32m}[m
+[32m+[m[32m  .post-icon-container .post-icon-tooltip{[m
+[32m+[m	[32mposition: absolute;[m
+[32m+[m	[32mbottom: -22px;[m
+[32m+[m	[32mbackground-color: gray;[m
+[32m+[m	[32mpadding: 3px;[m
+[32m+[m	[32mcolor: white;[m
+[32m+[m	[32mfont-size: 11px;[m
+[32m+[m	[32mopacity:0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-icon-container:hover .post-icon-tooltip{[m
+[32m+[m	[32mopacity:1;[m
+[32m+[m[32m}[m
+[32m+[m[32m.tweet-button{[m
+[32m+[m	[32mbackground-color: rgba(29, 156, 240, 0.551);[m
+[32m+[m	[32mcolor: white;[m
+[32m+[m	[32mfont-weight: 900;[m
+[32m+[m	[32mpadding-top: 8px;[m
+[32m+[m	[32mpadding-bottom: 8px;[m
+[32m+[m	[32mpadding-right: 15px;[m
+[32m+[m	[32mpadding-left:15px;[m
+[32m+[m	[32mborder: none;[m
+[32m+[m	[32mborder-top-right-radius: 20px;[m
+[32m+[m	[32mborder-top-left-radius: 20px;[m
+[32m+[m	[32mborder-bottom-left-radius: 20px;[m
+[32m+[m	[32mborder-bottom-right-radius: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.submit-tweet{[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mjustify-content: space-between;[m
+[32m+[m	[32mpadding-right: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-2{[m
+[32m+[m	[32mcolor:rgb(29, 156, 240);[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mjustify-content: center;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m	[32mmargin-bottom: 18px ;[m
+[32m+[m	[32mborder-bottom: 1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m	[32mheight: 42px;[m
+[32m+[m	[32mwidth:100%[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-2-1{[m
+[32m+[m	[32mwidth: 100%;[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-2-1-content{[m
+[32m+[m	[32mdisplay:flex;[m
+[32m+[m	[32mjustify-content: center;[m
+[32m+[m	[32malign-items: center;[m
+[32m+[m	[32mwidth:100%;[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-2:hover{[m
+[32m+[m	[32mbackground-color: rgba(29, 156, 240, 0.122);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.favicon-container{[m
+[32m+[m	[32mwidth: 50px;[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mjustify-content:right ;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.favicon{[m
+[32m+[m	[32mwidth: 18px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-id{[m
+[32m+[m	[32mflex:1;[m
+[32m+[m	[32mmargin-left: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.tweet{[m
+[32m+[m	[32mdisplay:flex;[m
+[32m+[m	[32mmargin-bottom: 20px;[m
+[32m+[m	[32mpadding:0 5px[m
+[32m+[m[32m}[m
+[32m+[m[32m.tweet-1{[m
+[32m+[m	[32mdisplay:flex;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-author{[m
+[32m+[m	[32mmargin-bottom: 8px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-portable[m
+[32m+[m[32m.post-content{[m
+[32m+[m	[32mfont-size: 18px;[m
+[32m+[m	[32mline-height: 25px;[m
+[32m+[m	[32mmax-width: 100%;[m
+[32m+[m[32m}[m
+[32m+[m[32m.hash-tags{[m
+[32m+[m	[32mmargin-top: 20px;[m
+[32m+[m	[32mcolor:rgba(29, 156, 240, 0.673);[m
+[32m+[m	[32mfont-weight: 550;[m
+[32m+[m	[32mfont-size: 18px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-stats{[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mjustify-content: space-between;[m
+[32m+[m[32m}a{[m
+[32m+[m	[32mtext-decoration: none;[m
+[32m+[m	[32mcolor:rgb(29, 155, 240);[m
+[32m+[m	[32mfont-size: 18px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.thread{[m
+[32m+[m	[32mmargin:12px 0;[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-3{[m
+[32m+[m	[32mpadding-top: 17px;[m
+[32m+[m	[32mpadding-left: 20px;[m
+[32m+[m	[32mmargin-bottom: 20px;[m
+[32m+[m	[32mborder-bottom: 1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m}[m
+[32m+[m[32m.row-3:hover{[m
+[32m+[m	[32mbackground-color: rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.videos{[m
+[32m+[m	[32mwidth:100%;[m
+[32m+[m	[32mmax-width: 440px;[m
+[32m+[m	[32mborder-bottom-left-radius: 20px;[m
+[32m+[m	[32mborder-bottom-right-radius: 20px;[m
+[32m+[m	[32mborder-top-left-radius: 20px;[m
+[32m+[m	[32mborder-top-right-radius: 20px;[m
+[32m+[m	[32mborder:1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m}[m
+[32m+[m[32mvideo{[m
+[32m+[m	[32mwidth:100%;[m
+[32m+[m	[32mmax-width: 440px;[m
+[32m+[m	[32mdisplay: flex;[m
+[32m+[m	[32mpadding:0;[m
+[32m+[m	[32mmargin-bottom: 0;[m
+[32m+[m	[32mborder-top-left-radius: 20px;[m
+[32m+[m	[32mborder-top-right-radius: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.video-note{[m
+[32m+[m	[32mborder-bottom-left-radius: 20px;[m
+[32m+[m	[32mborder-bottom-right-radius: 20px;[m
+[32m+[m	[32mpadding-left:10px;[m
+[32m+[m	[32mbackground-color: white;[m
+[32m+[m	[32mcolor:black;[m
+[32m+[m	[32mmargin-top: -8px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-image-container{[m
+[32m+[m	[32mborder:1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m	[32mwidth: 100%;[m
+[32m+[m	[32mmax-width: 440px;[m
+[32m+[m	[32mborder-top-left-radius: 20px;[m
+[32m+[m	[32mborder-top-right-radius: 20px;[m
+[32m+[m	[32mborder-bottom-left-radius: 20px;[m
+[32m+[m	[32mborder-bottom-right-radius: 20px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.post-image{[m
+[32m+[m	[32mwidth:100%;[m
+[32m+[m	[32mmax-width: 430px;[m
+[32m+[m	[32mmax-height: 440px;[m
+[32m+[m	[32mborder-top-left-radius: 20px;[m
+[32m+[m	[32mborder-top-right-radius: 20px;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m@media (max-width: 800px){[m
+[32m+[m	[32mbody{[m
+[32m+[m		[32mmargin-left:51px;[m
+[32m+[m		[32mmargin-bottom: 51px;[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.home{[m
+[32m+[m		[32mleft:71px;[m
+[32m+[m		[32mwidth: calc(100% - 70px);[m
+[32m+[m		[32mmargin:0;[m
+[32m+[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.section{[m
+[32m+[m		[32mmargin-left: 0px;[m
+[32m+[m		[32mpadding:0;[m
+[32m+[m		[32mwidth: calc(100% - 51px);[m
+[32m+[m		[32mmargin-top: 53px;[m
+[32m+[m		[32mdisplay: flex;[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.middle-section{[m
+[32m+[m		[32mmargin: 0;[m
+[32m+[m		[32mmargin-left:20px;[m
+[32m+[m		[32mpadding:0;[m
+[32m+[m		[32mwidth:calc(100% - 70px);[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m	[32m.row-1{[m
+[32m+[m		[32mpadding-top: 20px;[m
+[32m+[m	[32m}[m
+[32m+[m[32m}[m
+[32m+[m[32m@media(max-width:500px){[m
+[32m+[m	[32mbody{[m
+[32m+[m		[32mmargin:0;[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.home{[m
+[32m+[m		[32mleft:56px;[m
+[32m+[m		[32mtop:0;[m
+[32m+[m		[32mmargin:0;[m
+[32m+[m		[32mwidth:calc(100% - 60px);[m
+[32m+[m		[32mmin-width:300px;[m
+[32m+[m		[32mborder-width: 0px;[m
+[32m+[m		[32mz-index: 3;[m
+[32m+[m		[32mbackground-color: rgba(255, 255, 255, 0.99);[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.top-tweet{[m
+[32m+[m		[32mmargin-right: 20px;[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.middle-section{[m
+[32m+[m		[32mmargin:12px;[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.section{[m
+[32m+[m		[32mmargin-top: 51px;[m
+[32m+[m[41m		[m
+[32m+[m	[32m}[m
+[32m+[m	[32m.row-1, .row-2, .row-3{[m
+[32m+[m		[32mpadding:0px;[m
+[32m+[m	[32m}[m
+[32m+[m[41m	[m
+[32m+[m[41m	[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/GIF.svg b/icons/GIF.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0946522[m
+[1m--- /dev/null[m
+[1m+++ b/icons/GIF.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M16.5 28h3.05q.6 0 1.025-.45Q21 27.1 21 26.5v-2h-1.5v2h-3v-5h4.4q0-.6-.4-1.05-.4-.45-1-.45h-3q-.65 0-1.075.425Q15 20.85 15 21.5v5q0 .65.425 1.075Q15.85 28 16.5 28Zm6.75 0h1.5v-8h-1.5ZM27 28h1.5v-3H32v-1.5h-3.5v-2H33V20h-6ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/ball.svg b/icons/ball.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f24749c[m
+[1m--- /dev/null[m
+[1m+++ b/icons/ball.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><circle fill="#F5F8FA" cx="18" cy="18" r="18"/><path d="M18 11c-.552 0-1-.448-1-1V3c0-.552.448-1 1-1s1 .448 1 1v7c0 .552-.448 1-1 1zm-6.583 4.5c-.1 0-.202-.015-.302-.047l-8.041-2.542c-.527-.167-.819-.728-.652-1.255.166-.527.73-.818 1.255-.652l8.042 2.542c.527.167.819.729.652 1.255-.136.426-.53.699-.954.699zm13.625-.291c-.434 0-.833-.285-.96-.722-.154-.531.151-1.085.682-1.239l6.75-1.958c.531-.153 1.085.153 1.238.682.154.531-.151 1.085-.682 1.239l-6.75 1.958c-.092.027-.186.04-.278.04zm2.001 14.958c-.306 0-.606-.14-.803-.403l-5.459-7.333c-.33-.442-.238-1.069.205-1.399.442-.331 1.069-.238 1.399.205l5.459 7.333c.33.442.238 1.069-.205 1.399-.179.134-.389.198-.596.198zm-18.294-.083c-.197 0-.395-.058-.57-.179-.454-.316-.565-.938-.25-1.392l5.125-7.375c.315-.454.938-.566 1.392-.251.454.315.565.939.25 1.392l-5.125 7.375c-.194.281-.506.43-.822.43zM3.5 27.062c-.44 0-.844-.293-.965-.738L.347 18.262c-.145-.533.17-1.082.704-1.227.535-.141 1.083.171 1.227.704l2.188 8.062c.145.533-.17 1.082-.704 1.226-.088.025-.176.035-.262.035zM22 34h-9c-.552 0-1-.447-1-1s.448-1 1-1h9c.553 0 1 .447 1 1s-.447 1-1 1zm10.126-6.875c-.079 0-.16-.009-.24-.029-.536-.132-.864-.674-.731-1.21l2.125-8.625c.133-.536.679-.862 1.21-.732.536.132.864.674.731 1.211l-2.125 8.625c-.113.455-.521.76-.97.76zM30.312 7.688c-.17 0-.342-.043-.5-.134L22.25 3.179c-.478-.277-.642-.888-.364-1.367.275-.478.886-.643 1.366-.365l7.562 4.375c.478.277.642.888.364 1.367-.185.32-.521.499-.866.499zm-24.811 0c-.312 0-.618-.145-.813-.417-.322-.45-.22-1.074.229-1.396l6.188-4.438c.449-.322 1.074-.219 1.396.229.322.449.219 1.074-.229 1.396L6.083 7.5c-.177.126-.38.188-.582.188z" fill="#CCD6DD"/><path d="M25.493 13.516l-7.208-5.083c-.348-.245-.814-.243-1.161.006l-7.167 5.167c-.343.248-.494.684-.375 1.091l2.5 8.583c.124.426.515.72.96.72H22c.43 0 .81-.274.948-.681l2.917-8.667c.141-.419-.011-.881-.372-1.136zM1.292 19.542c.058 0 .117-.005.175-.016.294-.052.55-.233.697-.494l3.375-6c.051-.091.087-.188.108-.291L6.98 6.2c.06-.294-.016-.6-.206-.832C6.584 5.135 6.3 5 6 5h-.428C2.145 8.277 0 12.884 0 18c0 .266.028.525.04.788l.602.514c.182.156.413.24.65.24zm9.325-16.547c.106.219.313.373.553.412l6.375 1.042c.04.006.081.01.121.01.04 0 .081-.003.122-.01l6.084-1c.2-.033.38-.146.495-.314.116-.168.158-.375.118-.575l-.292-1.443C22.26.407 20.18 0 18 0c-2.425 0-4.734.486-6.845 1.356l-.521.95c-.117.213-.123.47-.017.689zm20.517 2.724l-1.504-.095c-.228-.013-.455.076-.609.249-.152.173-.218.402-.175.63l1.167 6.198c.017.086.048.148.093.224 1.492 2.504 3.152 5.301 3.381 5.782.024.084.062.079.114.151.14.195.372.142.612.142h.007c.198 0 .323.094 1.768-.753.001-.083.012-.164.012-.247 0-4.753-1.856-9.064-4.866-12.281zM14.541 33.376c.011-.199-.058-.395-.191-.544l-4.5-5c-.06-.066-.131-.122-.211-.163-5.885-3.069-5.994-3.105-6.066-3.13-.078-.025-.161-.039-.242-.039-.537 0-.695.065-1.185 2.024 2.236 4.149 6.053 7.316 10.644 8.703l1.5-1.333c.149-.132.239-.319.251-.518zm17.833-8.567c-.189-.08-.405-.078-.592.005l-6.083 2.667c-.106.046-.2.116-.274.205l-4.25 5.083c-.129.154-.19.352-.172.552.02.2.117.384.272.51.683.559 1.261 1.03 1.767 1.44 4.437-1.294 8.154-4.248 10.454-8.146l-.712-1.889c-.072-.193-.221-.347-.41-.427z" fill="#31373D"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/favicon.svg b/icons/favicon.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..c0e6687[m
+[1m--- /dev/null[m
+[1m+++ b/icons/favicon.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="48px" height="48px"><path fill="#03A9F4" d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/gallery.svg b/icons/gallery.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6a0f67f[m
+[1m--- /dev/null[m
+[1m+++ b/icons/gallery.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30Zm2.8-4.85h24.45l-7.35-9.8-6.6 8.55-4.65-6.35ZM9 39V9v30Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/hash.png b/icons/hash.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8b244a1[m
+Binary files /dev/null and b/icons/hash.png differ
+[1mdiff --git a/icons/home.svg b/icons/home.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4c12dbb[m
+[1m--- /dev/null[m
+[1m+++ b/icons/home.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M4,10V21h6V15h4v6h6V10L12,3Z" class="style-scope yt-icon"></path></g></svg>[m
+[1mdiff --git a/icons/location.svg b/icons/location.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..18d2bb2[m
+[1m--- /dev/null[m
+[1m+++ b/icons/location.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 23.5q1.45 0 2.475-1.025Q27.5 21.45 27.5 20q0-1.45-1.025-2.475Q25.45 16.5 24 16.5q-1.45 0-2.475 1.025Q20.5 18.55 20.5 20q0 1.45 1.025 2.475Q22.55 23.5 24 23.5Zm0 16.55q6.65-6.05 9.825-10.975Q37 24.15 37 20.4q0-5.9-3.775-9.65T24 7q-5.45 0-9.225 3.75Q11 14.5 11 20.4q0 3.75 3.25 8.675Q17.5 34 24 40.05ZM24 44q-8.05-6.85-12.025-12.725Q8 25.4 8 20.4q0-7.5 4.825-11.95Q17.65 4 24 4q6.35 0 11.175 4.45Q40 12.9 40 20.4q0 5-3.975 10.875T24 44Zm0-23.6Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/message.svg b/icons/message.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8dd594a[m
+[1m--- /dev/null[m
+[1m+++ b/icons/message.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/more.svg b/icons/more.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..eced15d[m
+[1m--- /dev/null[m
+[1m+++ b/icons/more.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M10.4 26.4q-1 0-1.7-.7T8 24q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Zm13.6 0q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Zm13.6 0q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7T40 24q0 1-.7 1.7t-1.7.7Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/notifications.svg b/icons/notifications.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d4daa3d[m
+[1m--- /dev/null[m
+[1m+++ b/icons/notifications.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M8 38v-3h4.2V19.7q0-4.2 2.475-7.475Q17.15 8.95 21.2 8.1V6.65q0-1.15.825-1.9T24 4q1.15 0 1.975.75.825.75.825 1.9V8.1q4.05.85 6.55 4.125t2.5 7.475V35H40v3Zm16-14.75ZM24 44q-1.6 0-2.8-1.175Q20 41.65 20 40h8q0 1.65-1.175 2.825Q25.65 44 24 44Zm-8.8-9h17.65V19.7q0-3.7-2.55-6.3-2.55-2.6-6.25-2.6t-6.275 2.6Q15.2 16 15.2 19.7Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/person.svg b/icons/person.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..88c85dd[m
+[1m--- /dev/null[m
+[1m+++ b/icons/person.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 23.95q-3.3 0-5.4-2.1-2.1-2.1-2.1-5.4 0-3.3 2.1-5.4 2.1-2.1 5.4-2.1 3.3 0 5.4 2.1 2.1 2.1 2.1 5.4 0 3.3-2.1 5.4-2.1 2.1-5.4 2.1ZM8 40v-4.7q0-1.9.95-3.25T11.4 30q3.35-1.5 6.425-2.25Q20.9 27 24 27q3.1 0 6.15.775 3.05.775 6.4 2.225 1.55.7 2.5 2.05.95 1.35.95 3.25V40Zm3-3h26v-1.7q0-.8-.475-1.525-.475-.725-1.175-1.075-3.2-1.55-5.85-2.125Q26.85 30 24 30t-5.55.575q-2.7.575-5.85 2.125-.7.35-1.15 1.075Q11 34.5 11 35.3Zm13-16.05q1.95 0 3.225-1.275Q28.5 18.4 28.5 16.45q0-1.95-1.275-3.225Q25.95 11.95 24 11.95q-1.95 0-3.225 1.275Q19.5 14.5 19.5 16.45q0 1.95 1.275 3.225Q22.05 20.95 24 20.95Zm0-4.5ZM24 37Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/poll.svg b/icons/poll.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8bc1fdc[m
+[1m--- /dev/null[m
+[1m+++ b/icons/poll.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M22.65 19.75h11.4v-3h-11.4Zm0 11.5h11.4v-3h-11.4Zm-5.25-10.4q1.05 0 1.825-.775Q20 19.3 20 18.25q0-1.05-.775-1.825-.775-.775-1.825-.775-1.05 0-1.825.775-.775.775-.775 1.825 0 1.05.775 1.825.775.775 1.825.775Zm0 11.5q1.05 0 1.825-.775Q20 30.8 20 29.75q0-1.05-.775-1.825-.775-.775-1.825-.775-1.05 0-1.825.775-.775.775-.775 1.825 0 1.05.775 1.825.775.775 1.825.775ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/post1.jpg b/icons/post1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..eee8f0e[m
+Binary files /dev/null and b/icons/post1.jpg differ
+[1mdiff --git a/icons/post2.jpg b/icons/post2.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d271486[m
+Binary files /dev/null and b/icons/post2.jpg differ
+[1mdiff --git a/icons/profile image.png b/icons/profile image.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..ecffef9[m
+Binary files /dev/null and b/icons/profile image.png differ
+[1mdiff --git a/icons/profile1.jpg b/icons/profile1.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..336daec[m
+Binary files /dev/null and b/icons/profile1.jpg differ
+[1mdiff --git a/icons/profile2.jpeg b/icons/profile2.jpeg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2fc7a88[m
+Binary files /dev/null and b/icons/profile2.jpeg differ
+[1mdiff --git a/icons/profile3.jpg b/icons/profile3.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e641b6f[m
+Binary files /dev/null and b/icons/profile3.jpg differ
+[1mdiff --git a/icons/public.png b/icons/public.png[m
+[1mnew file mode 100644[m
+[1mindex 0000000..79ab737[m
+Binary files /dev/null and b/icons/public.png differ
+[1mdiff --git a/icons/schedule.svg b/icons/schedule.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..02a07ba[m
+[1m--- /dev/null[m
+[1m+++ b/icons/schedule.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M34.55 44q-3.9 0-6.675-2.775T25.1 34.55q0-3.9 2.775-6.675T34.55 25.1q3.9 0 6.675 2.775T44 34.55q0 3.9-2.775 6.675T34.55 44Zm2.9-4.4 1.4-1.4-3.75-3.75v-5.6h-1.95v6.3ZM9 41.3q-1.25 0-2.125-.875T6 38.3V9.2q0-1.25.775-2.125T8.1 6.2h10.1q.35-1.75 1.725-2.875T23.1 2.2q1.8 0 3.175 1.125Q27.65 4.45 28 6.2h10.1q1.25 0 2.125.875T41.1 9.2v14.75q-.75-.45-1.475-.775-.725-.325-1.525-.575V9.2h-5.3v6.5H14.3V9.2H9v29.1h13.65q.25.75.6 1.475.35.725.85 1.525ZM24 9q.85 0 1.425-.575Q26 7.85 26 7q0-.85-.575-1.425Q24.85 5 24 5q-.85 0-1.425.575Q22 6.15 22 7q0 .85.575 1.425Q23.15 9 24 9Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/search.svg b/icons/search.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..64a0860[m
+[1m--- /dev/null[m
+[1m+++ b/icons/search.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z" class="style-scope yt-icon"></path></g></svg>[m
+[1mdiff --git a/icons/smiley.svg b/icons/smiley.svg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e2debdb[m
+[1m--- /dev/null[m
+[1m+++ b/icons/smiley.svg[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32m<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M31.3 21.35q1.15 0 1.925-.8.775-.8.775-1.9 0-1.15-.775-1.925-.775-.775-1.925-.775-1.1 0-1.9.775-.8.775-.8 1.925 0 1.1.8 1.9.8.8 1.9.8Zm-14.6 0q1.15 0 1.925-.8.775-.8.775-1.9 0-1.15-.775-1.925-.775-.775-1.925-.775-1.1 0-1.9.775-.8.775-.8 1.925 0 1.1.8 1.9.8.8 1.9.8Zm7.3 13.6q3.3 0 6.075-1.775Q32.85 31.4 34.1 28.35h-2.6q-1.15 2-3.15 3.075-2 1.075-4.3 1.075-2.35 0-4.375-1.05t-3.125-3.1H13.9q1.3 3.05 4.05 4.825Q20.7 34.95 24 34.95ZM24 44q-4.15 0-7.8-1.575-3.65-1.575-6.35-4.275-2.7-2.7-4.275-6.35Q4 28.15 4 24t1.575-7.8Q7.15 12.55 9.85 9.85q2.7-2.7 6.35-4.275Q19.85 4 24 4t7.8 1.575q3.65 1.575 6.35 4.275 2.7 2.7 4.275 6.35Q44 19.85 44 24t-1.575 7.8q-1.575 3.65-4.275 6.35-2.7 2.7-6.35 4.275Q28.15 44 24 44Zm0-20Zm0 17q7.1 0 12.05-4.95Q41 31.1 41 24q0-7.1-4.95-12.05Q31.1 7 24 7q-7.1 0-12.05 4.95Q7 16.9 7 24q0 7.1 4.95 12.05Q16.9 41 24 41Z"/></svg>[m
+\ No newline at end of file[m
+[1mdiff --git a/icons/top-tweet b/icons/top-tweet[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d308984[m
+Binary files /dev/null and b/icons/top-tweet differ
+[1mdiff --git a/icons/top-tweet.jpg b/icons/top-tweet.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d59f7d0[m
+Binary files /dev/null and b/icons/top-tweet.jpg differ
+[1mdiff --git a/icons/twitter.mp4 b/icons/twitter.mp4[m
+[1mnew file mode 100644[m
+[1mindex 0000000..01ed8de[m
+Binary files /dev/null and b/icons/twitter.mp4 differ
+[1mdiff --git a/icons/user.jpg b/icons/user.jpg[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0adf18c[m
+Binary files /dev/null and b/icons/user.jpg differ
+[1mdiff --git a/nav.html b/nav.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..033e914[m
+[1m--- /dev/null[m
+[1m+++ b/nav.html[m
+[36m@@ -0,0 +1,49 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>nav button Test</title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<style>[m
+[32m+[m[32m    body{[m
+[32m+[m[32m        padding:0;[m
+[32m+[m[32m        margin:0;[m
+[32m+[m[32m        height:100vh;[m
+[32m+[m[32m        display:flex;[m
+[32m+[m[32m        justify-content: center;[m
+[32m+[m[32m        align-items:center;[m
+[32m+[m[32m        background-color: green;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .square{[m
+[32m+[m[32m        position: fixed;[m
+[32m+[m[32m        top:0;[m
+[32m+[m[32m        left:0;[m
+[32m+[m[32m        width: 300px;[m
+[32m+[m[32m        height: 100%;[m
+[32m+[m[32m        display:none;[m
+[32m+[m[32m        align-items: center;[m
+[32m+[m[32m        justify-content: center;[m
+[32m+[m[32m        background-color: red;[m
+[32m+[m[32m        transform: translateX(5%,10%);[m
+[32m+[m[32m        transition:transform 2s ease-in-out;[m
+[32m+[m[32m        transition-duration: 5s;[m
+[32m+[m[41m        [m
+[32m+[m[41m        [m
+[32m+[m[32m    }[m
+[32m+[m[32m    input:checked ~ .square{[m
+[32m+[m[32m        display: block;[m
+[32m+[m[41m        [m
+[32m+[m[32m    }[m
+[32m+[m[32m</style>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <label for="square">Toggle</label>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m       <input type="checkbox" hidden id="square">[m
+[32m+[m[32m        <div class="square">[m
+[32m+[m[41m            [m
+[32m+[m[32m        </div>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/sidebar.css b/sidebar.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..3d3989d[m
+[1m--- /dev/null[m
+[1m+++ b/sidebar.css[m
+[36m@@ -0,0 +1,292 @@[m
+[32m+[m[32m.sidebar{[m
+[32m+[m[32m    position:fixed;[m
+[32m+[m[32m    top: 0;[m
+[32m+[m[32m    left:0;[m
+[32m+[m[32m    width: 256px;[m
+[32m+[m[32m    max-width: 256px;[m
+[32m+[m[32m    height:100%;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    padding-right: 30px;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m    border-right: 1px solid rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m    overflow-y: auto;[m
+[32m+[m[32m    background-color: white;[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-top{[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    margin-left: 50px;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-1,.sidebar-3,.sidebar-4, .sidebar-5, .sidebar-6, .sidebar-7, .sidebar-8, .sidebar-9, .sidebar-10{[m
+[32m+[m[32m    position: relative;[m
+[32m+[m[32m    padding:12px;[m
+[32m+[m[32m    display:flex;[m
+[32m+[m[32m    flex-direction: row;[m
+[32m+[m[32m    align-self:flex-start;[m
+[32m+[m[32m    font-size: 18px;[m
+[32m+[m[32m    font-weight: 700;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-2{[m
+[32m+[m[32m    width:70px;[m
+[32m+[m[32m    height:70px;[m
+[32m+[m[32m    color:white;[m
+[32m+[m[32m    display:flex;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    background-color: rgb(29, 155, 240);[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-2:hover{[m
+[32m+[m[32m    box-shadow: 0px 0px 20px 0px rgba(200, 200, 200,0.5);[m
+[32m+[m[32m}[m
+[32m+[m[32m.home-dot{[m
+[32m+[m[32m    position: absolute;[m
+[32m+[m[32m    background-color:rgb(29, 155, 240);[m
+[32m+[m[32m    width:7px;[m
+[32m+[m[32m    height: 7px;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    top:8px;[m
+[32m+[m[32m    left: 28px;[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-id{[m
+[32m+[m[32m    margin-left: 20px;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-10{[m
+[32m+[m	[32mdisplay:none;[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-1:hover, .sidebar-3:hover,.sidebar-4:hover, .sidebar-5:hover, .sidebar-6:hover, .sidebar-7:hover, .sidebar-8:hover, .sidebar-9:hover{[m
+[32m+[m[32m    background-color: rgba(200, 200, 200,0.5);[m
+[32m+[m[32m    padding:12px;[m
+[32m+[m[32m    border-top-left-radius: 30px;[m
+[32m+[m[32m    border-top-right-radius: 30px;[m
+[32m+[m[32m    border-bottom-left-radius: 30px;[m
+[32m+[m[32m    border-bottom-right-radius: 30px;[m
+[32m+[m[32m    transition: 0.07s;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32m.sidebar-svg{[m
+[32m+[m[32m    width:25px;[m
+[32m+[m[32m    color: red !important;[m
+[32m+[m[32m}[m
+[32m+[m[32m.nav{[m
+[32m+[m[32m    display:none;[m
+[32m+[m[41m   [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m@media (max-width:800px){[m
+[32m+[m[32m    .sidebar{[m
+[32m+[m[32m        max-width: 70px;[m
+[32m+[m[32m        overflow-y: hidden;[m
+[32m+[m[32m        display:flex;[m
+[32m+[m[32m        align-items: center;[m
+[32m+[m[32m        justify-content: space-between;[m
+[32m+[m[32m        margin:0;[m
+[32m+[m[32m        padding-right: 0;[m
+[32m+[m[32m        height:100%;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .sidebar-top{[m
+[32m+[m[32m        display:flex;[m
+[32m+[m[32m        justify-content: center;[m
+[32m+[m[32m        align-items: center;[m
+[32m+[m[32m        margin-left:0;[m
+[32m+[m[32m        margin-right: 0;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .sidebar-id{[m
+[32m+[m[32m        display:none;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .sidebar-1{[m
+[32m+[m[32m        display:flex;[m
+[32m+[m[32m        align-items: center;[m
+[32m+[m[32m    }[m
+[32m+[m[32m    .sidebar-2{[m
+[32m+[m[32m        width: 50px;[m
+[32m+[m[32m        height: 50px;[m
+[32m+[m[32m    }[m
+[32m+[m[41m    [m
+[32m+[m[32m    }[m
+[32m+[m[32m    @media(max-width:500px){[m
+[32m+[m[32m        .sidebar{[m
+[32m+[m[32m            display:flex;[m
+[32m+[m[32m            flex-direction: row;[m
+[32m+[m[32m            justify-content: space-evenly ;[m
+[32m+[m[32m            align-items: center;[m
+[32m+[m[32m            background-color: white;[m
+[32m+[m[32m            max-width: 100%;[m
+[32m+[m[32m            width: 100%;[m
+[32m+[m[32m            height: 100px;[m
+[32m+[m[32m            top:unset !important;[m
+[32m+[m[32m            position:fixed;[m
+[32m+[m[32m            bottom: 0;[m
+[32m+[m[32m            right:0;[m
+[32m+[m[32m            left:0;[m
+[32m+[m[32m            border-width: 0px;[m
+[32m+[m[32m            z-index: 500;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .sidebar-top{[m
+[32m+[m[32m            background-color: white;[m
+[32m+[m[32m            display:flex;[m
+[32m+[m[32m            flex-direction: row;[m
+[32m+[m			[32mjustify-content: space-evenly;[m
+[32m+[m			[32mwidth:100%;[m
+[32m+[m
+[32m+[m[32m        }[m
+[32m+[m		[32m.sidebar-1,.sidebar-4, .sidebar-7, .sidebar-8{[m
+[32m+[m			[32mdisplay: none;[m
+[32m+[m		[32m}[m
+[32m+[m		[32m.sidebar-3, .sidebar-5,.sidebar-10, .sidebar-6{[m
+[32m+[m			[32mdisplay: flex;[m
+[32m+[m			[32mflex-direction: row;[m
+[32m+[m			[32mjustify-content: flex-start;[m
+[32m+[m[41m		[m
+[32m+[m		[32m}[m
+[32m+[m		[32m.sidebar-9{[m
+[32m+[m			[32mposition:fixed;[m
+[32m+[m			[32mtop:0;[m
+[32m+[m			[32mleft:0;[m
+[32m+[m			[32mpadding:9px;[m
+[32m+[m			[32mbackground-color: rgba(255, 255, 255, 0.99);[m
+[32m+[m		[32m}[m
+[32m+[m		[32m.sidebar-2{[m
+[32m+[m			[32mwidth: 80px;[m
+[32m+[m			[32mheight:80px;[m
+[32m+[m			[32mposition:fixed;[m
+[32m+[m			[32mright: 25px;[m
+[32m+[m			[32mbottom: 100px;[m
+[32m+[m			[32mz-index: 500;[m
+[32m+[m		[32m}[m
+[32m+[m[41m        [m
+[32m+[m[32m        .nav{[m
+[32m+[m[32m            display:none;[m
+[32m+[m[32m            position:fixed;[m
+[32m+[m[32m            justify-content: space-between;[m
+[32m+[m[32m            top:0;[m
+[32m+[m[32m            left:0;[m
+[32m+[m[32m            margin: 0;[m
+[32m+[m[32m            flex-direction: column;[m
+[32m+[m[32m            width: 70%;[m
+[32m+[m[32m            height:100%;[m
+[32m+[m[32m            background-color: white;[m
+[32m+[m[32m            z-index: 5;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-head{[m
+[32m+[m[32m            display:flex;[m
+[32m+[m[32m            justify-content: space-between;[m
+[32m+[m[32m            margin: 15px 5px 30px 10px;[m
+[32m+[m[32m            font-size: 24px;[m
+[32m+[m[32m            font-weight: 600;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-sub-heading{[m
+[32m+[m[32m            display: flex;[m
+[32m+[m[32m            justify-content: space-between;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .profile-performance{[m
+[32m+[m[32m            display: flex;[m
+[32m+[m[32m            margin-bottom: 20px;[m
+[32m+[m[41m        [m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-menu{[m
+[32m+[m[32m            font-size: 40px;[m
+[32m+[m[32m            width: 100%;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-sidebar-1,.nav-sidebar-3,.nav-sidebar-4, .nav-sidebar-5, .nav-sidebar-6, .nav-sidebar-7, .nav-sidebar-8, .nav-sidebar-9, .nav-sidebar-10{[m
+[32m+[m[32m            display:flex;[m
+[32m+[m[32m            flex-direction: row;[m
+[32m+[m[32m            align-self:flex-start;[m
+[32m+[m[32m            padding: 20px 5px;[m
+[32m+[m[32m            font-size: 35px;[m
+[32m+[m[32m            font-weight: 700;[m
+[32m+[m[41m        [m
+[32m+[m[32m        }[m
+[32m+[m[32m        .open:checked ~ .nav{[m
+[32m+[m[32m            display: block;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        /* .open:checked ~ body{[m
+[32m+[m[32m            background-color: black;[m
+[32m+[m[32m        } */[m
+[32m+[m[41m       [m
+[32m+[m[32m        .account-info{[m
+[32m+[m[32m            font-size: 25px;[m
+[32m+[m[32m            font-weight: 600px;[m
+[32m+[m[32m            margin-left: 20px;[m
+[32m+[m[41m            [m
+[32m+[m[32m        }[m
+[32m+[m[32m        .cancel{[m
+[32m+[m[32m            width:30px;[m
+[32m+[m[32m            margin-right:15px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-profile-image{[m
+[32m+[m[32m            margin-left:20px;[m
+[32m+[m[32m            width: 50px;[m
+[32m+[m[32m            border-radius: 50%;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .add{[m
+[32m+[m[32m            border-radius: 50%;[m
+[32m+[m[32m            border: 1px solid rgb(100, 100, 100);[m
+[32m+[m[32m            display: flex;[m
+[32m+[m[32m            align-items: center;[m
+[32m+[m[32m            justify-content: center;[m
+[32m+[m[32m            margin-right: 20px;[m
+[32m+[m[32m            width: 40px;[m
+[32m+[m[32m            height: 40px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .add-icon{[m
+[32m+[m[32m            width: 30px;[m
+[32m+[m[32m            height: 30px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .profile-name{[m
+[32m+[m[32m            font-size: 20px;[m
+[32m+[m[32m            font-weight: 600;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .handle{[m
+[32m+[m[32m            color:rgba(200, 200, 200, 0.293);[m
+[32m+[m[32m            font-size: 18px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .handle-name{[m
+[32m+[m[32m            margin:5px 0px 15px 20px;[m
+[32m+[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-avatar{[m
+[32m+[m[32m            width: 40px;[m
+[32m+[m[32m            margin: 0px 20px 0px 0px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .nav-option{[m
+[32m+[m[32m            display: flex;[m
+[32m+[m[32m            justify-content: space-between;[m
+[32m+[m[32m            padding:20px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .options{[m
+[32m+[m[32m            width: 25px;[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+\ No newline at end of file[m
+[1mdiff --git a/twitter.html b/twitter.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..30b9495[m
+[1m--- /dev/null[m
+[1m+++ b/twitter.html[m
+[36m@@ -0,0 +1,1581 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <link rel="icon" href="icons/favicon.svg">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <link rel="stylesheet" href="general.css">[m
+[32m+[m[32m    <title>Home / Twitter</title>[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.googleapis.com">[m
+[32m+[m[32m    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>[m
+[32m+[m[41m    [m
+[32m+[m[32m    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">[m
+[32m+[m[32m    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />[m
+[32m+[m[32m    <link rel="stylesheet" href="sidebar.css">[m
+[32m+[m[32m    <link rel="stylesheet" href="aside.css">[m
+[32m+[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[41m   [m
+[32m+[m[32m      <div class="sidebar">[m
+[32m+[m
+[32m+[m[32m        <div class="sidebar-top">[m
+[32m+[m[32m            <div class="sidebar-1">[m
+[32m+[m[32m                <img style="width:30px" src="icons/top-tweet.jpg">[m
+[32m+[m[41m                [m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-3">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true" class="r-18jsvk2 r-4qtqp9 r-yyyyoo r-lwhw9o r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-cnnz9e"><g><path d="M12 1.696L.622 8.807l1.06 1.696L3 9.679V19.5C3 20.881 4.119 22 5.5 22h13c1.381 0 2.5-1.119 2.5-2.5V9.679l1.318.824 1.06-1.696L12 1.696zM12 16.5c-1.933 0-3.5-1.567-3.5-3.5s1.567-3.5 3.5-3.5 3.5 1.567 3.5 3.5-1.567 3.5-3.5 3.5z"></path></g></svg>[m
+[32m+[m[32m                <div class="home-dot"></div>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    Home[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="sidebar-10">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path></g></svg>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    Search[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-4">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M10.09 3.098L9.72 7h5.99l.39-4.089 1.99.187L17.72 7h3.78v2h-3.97l-.56 6h3.53v2h-3.72l-.38 4.089-1.99-.187.36-3.902H8.78l-.38 4.089-1.99-.187L6.77 17H2.5v-2h4.46l.56-6H3.5V7h4.21l.39-4.089 1.99.187zM14.96 15l.56-6H9.53l-.56 6h5.99z"></path></g></svg>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    Explore[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-5">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true" class="r-18jsvk2 r-4qtqp9 r-yyyyoo r-lwhw9o r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-cnnz9e"><g><path d="M19.993 9.042C19.48 5.017 16.054 2 11.996 2s-7.49 3.021-7.999 7.051L2.866 18H7.1c.463 2.282 2.481 4 4.9 4s4.437-1.718 4.9-4h4.236l-1.143-8.958zM12 20c-1.306 0-2.417-.835-2.829-2h5.658c-.412 1.165-1.523 2-2.829 2zm-6.866-4l.847-6.698C6.364 6.272 8.941 4 11.996 4s5.627 2.268 6.013 5.295L18.864 16H5.134z"></path></g></svg>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    Notifications[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-6">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true" ><g><path d="M1.998 5.5c0-1.381 1.119-2.5 2.5-2.5h15c1.381 0 2.5 1.119 2.5 2.5v13c0 1.381-1.119 2.5-2.5 2.5h-15c-1.381 0-2.5-1.119-2.5-2.5v-13zm2.5-.5c-.276 0-.5.224-.5.5v2.764l8 3.638 8-3.636V5.5c0-.276-.224-.5-.5-.5h-15zm15.5 5.463l-8 3.636-8-3.638V18.5c0 .276.224.5.5.5h15c.276 0 .5-.224.5-.5v-8.037z"></path></g></svg>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    Messages[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-7">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true" ><g><path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z"></path></g></svg>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    Profile[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-8">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true" ><g><path d="M3.75 12c0-4.56 3.69-8.25 8.25-8.25s8.25 3.69 8.25 8.25-3.69 8.25-8.25 8.25S3.75 16.56 3.75 12zM12 1.75C6.34 1.75 1.75 6.34 1.75 12S6.34 22.25 12 22.25 22.25 17.66 22.25 12 17.66 1.75 12 1.75zm-4.75 11.5c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25S6 11.31 6 12s.56 1.25 1.25 1.25zm9.5 0c.69 0 1.25-.56 1.25-1.25s-.56-1.25-1.25-1.25-1.25.56-1.25 1.25.56 1.25 1.25 1.25zM13.25 12c0 .69-.56 1.25-1.25 1.25s-1.25-.56-1.25-1.25.56-1.25 1.25-1.25 1.25.56 1.25 1.25z"></path></g></svg>[m
+[32m+[m[32m                <div class="sidebar-id">[m
+[32m+[m[32m                    More[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="sidebar-2">[m
+[32m+[m[32m                <svg class="sidebar-svg" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M23 3c-6.62-.1-10.38 2.421-13.05 6.03C7.29 12.61 6 17.331 6 22h2c0-1.007.07-2.012.19-3H12c4.1 0 7.48-3.082 7.94-7.054C22.79 10.147 23.17 6.359 23 3zm-7 8h-1.5v2H16c.63-.016 1.2-.08 1.72-.188C16.95 15.24 14.68 17 12 17H8.55c.57-2.512 1.57-4.851 3-6.78 2.16-2.912 5.29-4.911 9.45-5.187C20.95 8.079 19.9 11 16 11zM4 9V6H1V4h3V1h2v3h3v2H6v3H4z"></path></g></svg>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m        [m
+[32m+[m
+[32m+[m[32m        <div class="sidebar-9">[m
+[32m+[m[32m            <label for="menu">[m
+[32m+[m[32m                <img style="width:40px; border-radius: 50%;" src="icons/profile image.png">[m
+[32m+[m[32m            </label>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m  <!-- this is for mobile view nav button-->[m
+[32m+[m[32m    <input type="checkbox" class="open" id="menu" hidden>[m[41m          [m
+[32m+[m[41m        [m
+[32m+[m[32m    <div class="nav">[m
+[32m+[m[32m        <div class="nav-head">[m
+[32m+[m[32m        <div class="account-info">[m
+[32m+[m[32m            Account info[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div>[m[41m [m
+[32m+[m[32m           <label for="menu">[m
+[32m+[m[32m            <svg class="cancel" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M10.59 12L4.54 5.96l1.42-1.42L12 10.59l6.04-6.05 1.42 1.42L13.41 12l6.05 6.04-1.42 1.42L12 13.41l-6.04 6.05-1.42-1.42L10.59 12z"></path></g></svg>[m
+[32m+[m[32m        </label>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="nav-sub-heading">[m
+[32m+[m
+[32m+[m[32m        <div class="nav-profile-image">[m
+[32m+[m[32m                <img src="icons/profile image.png" class="profile-img">[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="add">[m
+[32m+[m[32m            <svg viewBox="0 0 24 24" class="add-icon" aria-hidden="true"  data-testid="iconPlus"><g><path d="M11 11V4h2v7h7v2h-7v7h-2v-7H4v-2h7z"></path></g></svg>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="handle-name">[m
+[32m+[m
+[32m+[m[32m           <p class="profile-name">[m
+[32m+[m[32m               Jeremiah Egbune[m
+[32m+[m[32m           </p>[m[41m [m
+[32m+[m[32m            <p class="handle">[m
+[32m+[m[32m                @jegbune[m
+[32m+[m[32m            </p>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m        <div class="profile-performance">[m
+[32m+[m[32m        <div style="margin:5px 20px;">[m
+[32m+[m[32m           <span style="font-size:18px; font-weight:600;">9</span> <span style="font-size: 16px; color:rgb(200, 200, 200)">Following</span>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div style="margin:5px 20px;">[m
+[32m+[m[32m            <span style="font-size:18px; font-weight:600;">6</span> <span style="font-size: 16px; color:rgb(200, 200, 200)">Follower</span>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="nav-menu">[m
+[32m+[m[32m        <div class="nav-sidebar-3">[m
+[32m+[m[32m            <svg viewBox="0 0 24 24" aria-hidden="true" class="nav-avatar" data-testid="icon"><g><path d="M5.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C15.318 13.65 13.838 13 12 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C7.627 11.85 9.648 11 12 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H3.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zM12 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM8 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4z"></path></g></svg>[m
+[32m+[m[32m                    Profile[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="nav-sidebar-10">[m
+[32m+[m[32m                <svg viewBox="0 0 24 24" aria-hidden="true" class="nav-avatar" data-testid="icon"><g><path d="M12 3.75C7.99 3.75 4.75 7 4.75 11s3.24 7.25 7.25 7.25h1v2.44c1.13-.45 2.42-1.3 3.54-2.54 1.52-1.67 2.66-3.95 2.71-6.67.07-4.46-3.28-7.73-7.25-7.73zM2.75 11c0-5.11 4.14-9.25 9.25-9.25s9.34 4.23 9.25 9.77c-.06 3.28-1.44 6.01-3.23 7.97-1.76 1.94-3.99 3.21-5.87 3.5l-1.15.17V20.2c-4.64-.5-8.25-4.43-8.25-9.2zM15 10H9V8h6v2zm-2 4H9v-2h4v2z"></path></g></svg>[m
+[32m+[m[32m                    Topics[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="nav-sidebar-4">[m
+[32m+[m[32m                <svg viewBox="0 0 24 24" aria-hidden="true" class="nav-avatar" data-testid="icon"><g><path d="M4 4.5C4 3.12 5.119 2 6.5 2h11C18.881 2 20 3.12 20 4.5v18.44l-8-5.71-8 5.71V4.5zM6.5 4c-.276 0-.5.22-.5.5v14.56l6-4.29 6 4.29V4.5c0-.28-.224-.5-.5-.5h-11z"></path></g></svg>[m
+[32m+[m[32m                    Bookmarks[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="nav-sidebar-5">[m
+[32m+[m[32m                <svg viewBox="0 0 24 24" aria-hidden="true" class="nav-avatar" data-testid="icon"><g><path d="M3 4.5C3 3.12 4.12 2 5.5 2h13C19.88 2 21 3.12 21 4.5v15c0 1.38-1.12 2.5-2.5 2.5h-13C4.12 22 3 20.88 3 19.5v-15zM5.5 4c-.28 0-.5.22-.5.5v15c0 .28.22.5.5.5h13c.28 0 .5-.22.5-.5v-15c0-.28-.22-.5-.5-.5h-13zM16 10H8V8h8v2zm-8 2h8v2H8v-2z"></path></g></svg>[m
+[32m+[m[32m                    Lists[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="nav-sidebar-6">[m
+[32m+[m[32m                <svg viewBox="0 0 24 24" aria-hidden="true" class="nav-avatar" data-testid="icon"><g><path d="M10 4c-1.105 0-2 .9-2 2s.895 2 2 2 2-.9 2-2-.895-2-2-2zM6 6c0-2.21 1.791-4 4-4s4 1.79 4 4-1.791 4-4 4-4-1.79-4-4zM3.651 19h12.698c-.337-1.8-1.023-3.21-1.945-4.19C13.318 13.65 11.838 13 10 13s-3.317.65-4.404 1.81c-.922.98-1.608 2.39-1.945 4.19zm.486-5.56C5.627 11.85 7.648 11 10 11s4.373.85 5.863 2.44c1.477 1.58 2.366 3.8 2.632 6.46l.11 1.1H1.395l.11-1.1c.266-2.66 1.155-4.88 2.632-6.46zm19.417-3.68c-.541.97-1.601 1.99-3.352 2.98l-.201.12-.202-.12c-1.751-.99-2.811-2.01-3.352-2.98-.545-.97-.564-1.88-.206-2.59.355-.69 1.059-1.13 1.84-1.17.661-.03 1.348.22 1.92.79.571-.57 1.258-.82 1.918-.79.781.04 1.485.48 1.84 1.17.358.71.339 1.62-.205 2.59z"></path></g></svg>                    Messages[m
+[32m+[m[32m            </div>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="nav-option">[m
+[32m+[m[32m           <p style="font-size: 26px;">[m
+[32m+[m[32m               Creator Studio[m
+[32m+[m[32m           </p>[m[41m [m
+[32m+[m[32m            <div>[m
+[32m+[m[32m                <svg viewBox="0 0 24 24" aria-hidden="true" class="options" data-testid="accordion-chevron"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg>[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="nav-option">[m
+[32m+[m[32m            <p style="font-size: 26px;">[m
+[32m+[m[32m                Professional Tools[m
+[32m+[m[32m            </p>[m[41m [m
+[32m+[m[32m             <div>[m
+[32m+[m[32m                 <svg viewBox="0 0 24 24" aria-hidden="true" class="options" data-testid="accordion-chevron"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg>[m
+[32m+[m[32m             </div>[m
+[32m+[m[32m         </div>[m
+[32m+[m
+[32m+[m[32m         <div class="nav-option">[m
+[32m+[m[32m            <p style="font-size: 26px; white-space: nowrap;">[m
+[32m+[m[32m                Settings and Support[m
+[32m+[m[32m            </p>[m[41m [m
+[32m+[m[32m             <div>[m
+[32m+[m[32m                 <svg viewBox="0 0 24 24" aria-hidden="true" class="options" data-testid="accordion-chevron"><g><path d="M3.543 8.96l1.414-1.42L12 14.59l7.043-7.05 1.414 1.42L12 17.41 3.543 8.96z"></path></g></svg>[m
+[32m+[m[32m             </div>[m
+[32m+[m[32m         </div>[m
+[32m+[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <!--end of the mobile view nav button-->[m
+[32m+[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m    <div class="home">[m
+[32m+[m[32m        <div class="p-home-container">[m
+[32m+[m[32m            <div class="p-home">Home</div>[m
+[32m+[m[32m       </div>[m
+[32m+[m[41m     [m
+[32m+[m[32m        <div class="top-tweet">[m
+[32m+[m[32m            <svg viewBox="0 0 24 24" aria-hidden="true" class="top-tweet-icon"><g><path d="M2 4c1.66 0 3-1.34 3-3h1c0 1.66 1.34 3 3 3v1C7.34 5 6 6.34 6 8H5c0-1.66-1.34-3-3-3V4zm7.89 4.9C11.26 7.53 12 5.35 12 2h2c0 3.35.74 5.53 2.1 6.9 1.36 1.36 3.55 2.1 6.9 2.1v2c-3.35 0-5.54.74-6.9 2.1-1.36 1.37-2.1 3.55-2.1 6.9h-2c0-3.35-.74-5.53-2.11-6.9C8.53 13.74 6.35 13 3 13v-2c3.35 0 5.53-.74 6.89-2.1zm7.32 3.1c-.97-.42-1.81-.97-2.53-1.69-.71-.71-1.27-1.56-1.68-2.52-.42.96-.98 1.81-1.69 2.52-.72.72-1.56 1.27-2.53 1.69.97.42 1.81.97 2.53 1.69.71.71 1.27 1.56 1.69 2.52.41-.96.97-1.81 1.68-2.52.72-.72 1.56-1.27 2.53-1.69z"></path></g></svg>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m    </div>[m
+[32m+[m[32m <div class="section">[m
+[32m+[m[32m    <div class="middle-section">[m
+[32m+[m[41m       [m
+[32m+[m[41m        [m
+[32m+[m[41m    [m
+[32m+[m[32m        <div class="row-1">[m
+[32m+[m[32m            <div>[m
+[32m+[m[32m                <img class="profile-img" src="icons/profile image.png">[m
+[32m+[m[32m            </div>[m
+[32m+[m[32m            <div class="top">[m
+[32m+[m[41m                           [m
+[32m+[m[32m                <div class="post-container">[m
+[32m+[m[32m                    <textarea placeholder="What's happening?" class="post"></textarea>[m
+[32m+[m[32m                </div>[m
+[32m+[m
+[32m+[m[32m                <div class="submit-tweet">[m
+[32m+[m[32m                    <div class="icon-post-container">[m
+[32m+[m[41m                    [m
+[32m+[m[32m                        <div class="post-icon-container">[m
+[32m+[m[32m                            <svg class="post-icon" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M3 5.5C3 4.119 4.119 3 5.5 3h13C19.881 3 21 4.119 21 5.5v13c0 1.381-1.119 2.5-2.5 2.5h-13C4.119 21 3 19.881 3 18.5v-13zM5.5 5c-.276 0-.5.224-.5.5v9.086l3-3 3 3 5-5 3 3V5.5c0-.276-.224-.5-.5-.5h-13zM19 15.414l-3-3-5 5-3-3-3 3V18.5c0 .276.224.5.5.5h13c.276 0 .5-.224.5-.5v-3.086zM9.75 7C8.784 7 8 7.784 8 8.75s.784 1.75 1.75 1.75 1.75-.784 1.75-1.75S10.716 7 9.75 7z"></path></g></svg>[m
+[32m+[m[32m                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                            Media[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                        <div class="post-icon-container">[m
+[32m+[m[32m                            <svg class="post-icon" viewBox="0 0 24 24" aria-hidden="true" ><g><path d="M3 5.5C3 4.119 4.12 3 5.5 3h13C19.88 3 21 4.119 21 5.5v13c0 1.381-1.12 2.5-2.5 2.5h-13C4.12 21 3 19.881 3 18.5v-13zM5.5 5c-.28 0-.5.224-.5.5v13c0 .276.22.5.5.5h13c.28 0 .5-.224.5-.5v-13c0-.276-.22-.5-.5-.5h-13zM18 10.711V9.25h-3.74v5.5h1.44v-1.719h1.7V11.57h-1.7v-.859H18zM11.79 9.25h1.44v5.5h-1.44v-5.5zm-3.07 1.375c.34 0 .77.172 1.02.43l1.03-.86c-.51-.601-1.28-.945-2.05-.945C7.19 9.25 6 10.453 6 12s1.19 2.75 2.72 2.75c.85 0 1.54-.344 2.05-.945v-2.149H8.38v1.032H9.4v.515c-.17.086-.42.172-.68.172-.76 0-1.36-.602-1.36-1.375 0-.688.6-1.375 1.36-1.375z"></path></g></svg>[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                GIF[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                        <div class="post-icon-container">[m
+[32m+[m[32m                            <svg class="post-icon" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M6 5c-1.1 0-2 .895-2 2s.9 2 2 2 2-.895 2-2-.9-2-2-2zM2 7c0-2.209 1.79-4 4-4s4 1.791 4 4-1.79 4-4 4-4-1.791-4-4zm20 1H12V6h10v2zM6 15c-1.1 0-2 .895-2 2s.9 2 2 2 2-.895 2-2-.9-2-2-2zm-4 2c0-2.209 1.79-4 4-4s4 1.791 4 4-1.79 4-4 4-4-1.791-4-4zm20 1H12v-2h10v2zM7 7c0 .552-.45 1-1 1s-1-.448-1-1 .45-1 1-1 1 .448 1 1z"></path></g></svg>[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Poll[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                        <div class="post-icon-container">[m
+[32m+[m[32m                            <svg class="post-icon" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M8 9.5C8 8.119 8.672 7 9.5 7S11 8.119 11 9.5 10.328 12 9.5 12 8 10.881 8 9.5zm6.5 2.5c.828 0 1.5-1.119 1.5-2.5S15.328 7 14.5 7 13 8.119 13 9.5s.672 2.5 1.5 2.5zM12 16c-2.224 0-3.021-2.227-3.051-2.316l-1.897.633c.05.15 1.271 3.684 4.949 3.684s4.898-3.533 4.949-3.684l-1.896-.638c-.033.095-.83 2.322-3.053 2.322zm10.25-4.001c0 5.652-4.598 10.25-10.25 10.25S1.75 17.652 1.75 12 6.348 1.75 12 1.75 22.25 6.348 22.25 12zm-2 0c0-4.549-3.701-8.25-8.25-8.25S3.75 7.451 3.75 12s3.701 8.25 8.25 8.25 8.25-3.701 8.25-8.25z"></path></g></svg>[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Emoji[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                        <div class="post-icon-container">[m
+[32m+[m[32m                            <svg class="post-icon" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M6 3V2h2v1h6V2h2v1h1.5C18.88 3 20 4.119 20 5.5v2h-2v-2c0-.276-.22-.5-.5-.5H16v1h-2V5H8v1H6V5H4.5c-.28 0-.5.224-.5.5v12c0 .276.22.5.5.5h3v2h-3C3.12 20 2 18.881 2 17.5v-12C2 4.119 3.12 3 4.5 3H6zm9.5 8c-2.49 0-4.5 2.015-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.01-4.5-4.5-4.5zM9 15.5C9 11.91 11.91 9 15.5 9s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5S9 19.09 9 15.5zm5.5-2.5h2v2.086l1.71 1.707-1.42 1.414-2.29-2.293V13z"></path></g></svg>[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Schedule[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                        <div class="post-icon-container">[m
+[32m+[m[32m                            <svg class="post-icon" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M12 7c-1.93 0-3.5 1.57-3.5 3.5S10.07 14 12 14s3.5-1.57 3.5-3.5S13.93 7 12 7zm0 5c-.827 0-1.5-.673-1.5-1.5S11.173 9 12 9s1.5.673 1.5 1.5S12.827 12 12 12zm0-10c-4.687 0-8.5 3.813-8.5 8.5 0 5.967 7.621 11.116 7.945 11.332l.555.37.555-.37c.324-.216 7.945-5.365 7.945-11.332C20.5 5.813 16.687 2 12 2zm0 17.77c-1.665-1.241-6.5-5.196-6.5-9.27C5.5 6.916 8.416 4 12 4s6.5 2.916 6.5 6.5c0 4.073-4.835 8.028-6.5 9.27z"></path></g></svg>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                      </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                        <div>[m
+[32m+[m[32m                            <button class="tweet-button">Tweet</button>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m           [m
+[32m+[m[32m        <div class="row-2">[m
+[32m+[m[41m           [m
+[32m+[m[32m           <div class="row-2-1">[m
+[32m+[m[32m               <span class="row-2-1-content">[m
+[32m+[m[32m                  Show 15 Tweets[m
+[32m+[m[32m              </span>[m
+[32m+[m[32m           </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m     [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[32m            <div class="tweet">[m
+[32m+[m[32m                <div class="favicon-container">[m
+[32m+[m[32m                    <img src="icons/profile image.png" class="favicon">[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div class="post-id">[m
+[32m+[m[32m                    Friday Anago and Chief follow[m
+[32m+[m[32m                </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="tweet-1">[m
+[32m+[m[32m                <div class="post-img">[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <img class="profile-img" src="icons/profile image.png">[m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                    <div class="img-thread">[m
+[32m+[m[41m    [m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <img class="profile-img-1" src="icons/profile image.png">[m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <div class="post-author">[m
+[32m+[m[32m                            <span style="font-size:20px; font-weight: 500;">O.G.B</span> &#10003; <span style="font-size:18px; color: gray;">@OGBdeyforyou &#183; 18h</span>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-content">[m
+[32m+[m[32m                            Which Nigerian artiste is best to feature on a song if you're looking for a hit? 🤔[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-stats">[m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Media[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Poll[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    GIF[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Emoji[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="thread">[m
+[32m+[m[32m                            <a href="#">[m
+[32m+[m[32m                                Show this thread[m
+[32m+[m[32m                            </a>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m            [m
+[32m+[m[41m            [m
+[32m+[m[32m                </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                 [m
+[32m+[m[32m            <div class="tweet-1">[m
+[32m+[m[32m                <div class="post-img">[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <div class="post-author">[m
+[32m+[m[32m                            <span style="font-size:20px; font-weight: 500;">OPPO Nigeria</span> &#10003; <span style="font-size:18px; color: gray;">@OPPONigeria</span>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-content">[m
+[32m+[m[32m                            Beauty is a thing to behold, a magic to create and a piece to treasured just like you Reno8.[m
+[32m+[m[32m                            <div class="hash-tags">[m
+[32m+[m[32m                                <p>[m
+[32m+[m[32m                                    #OPPOReno8[m
+[32m+[m[32m                                </p>[m
+[32m+[m[41m    [m
+[32m+[m[32m                                <p>[m
+[32m+[m[32m                                    #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                </p>[m
+[32m+[m[41m    [m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                            [m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-stats">[m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Media[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Poll[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    GIF[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Emoji[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="thread">[m
+[32m+[m[32m                            <a href="#">[m
+[32m+[m[32m                                Show this thread[m
+[32m+[m[32m                            </a>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m            [m
+[32m+[m[41m            [m
+[32m+[m[32m                </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                 [m
+[32m+[m[32m            <div class="tweet-1">[m
+[32m+[m[32m                <div class="post-img">[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <div class="post-author">[m
+[32m+[m[32m                            <span style="font-size:20px; font-weight: 500;">xpression camera</span> &#10003; <span style="font-size:18px; color: gray;">@xpression_app</span>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-content">[m
+[32m+[m[32m                            No time to get ready for your meeting? Use xpression camera to be dressed for all occasions.[m
+[32m+[m[32m                             <!-- <div class="hash-tags">[m
+[32m+[m[32m                                <p>[m
+[32m+[m[32m                                    #OPPOReno8[m
+[32m+[m[32m                                </p>[m
+[32m+[m[41m    [m
+[32m+[m[32m                                <p>[m
+[32m+[m[32m                                    #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                </p>[m
+[32m+[m[41m    [m
+[32m+[m[32m                            </div> -->[m
+[32m+[m[41m                           [m
+[32m+[m[32m                             <video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                    </video>[m
+[32m+[m[32m                          <div class="videos">[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                <div class="video-note">[m
+[32m+[m[32m                                    <p style="color:rgb(200, 200, 200); margin-bottom: 10px;">[m
+[32m+[m[32m                                        xpressioncamera.com[m
+[32m+[m[32m                                    </p>[m
+[32m+[m[32m                                   <p>[m
+[32m+[m[32m                                       Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                   </p>[m[41m [m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                            [m
+[32m+[m[32m                        <div class="post-stats">[m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Media[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Poll[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    GIF[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Emoji[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="thread">[m
+[32m+[m[32m                            <a href="#">[m
+[32m+[m[32m                                Show this thread[m
+[32m+[m[32m                            </a>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                 [m
+[32m+[m[32m                        <div class="tweet-1">[m
+[32m+[m[32m                            <div class="post-img">[m
+[32m+[m[32m                                <div>[m
+[32m+[m[32m                                    <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                                </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-portable">[m
+[32m+[m[32m                                    <div class="post-author">[m
+[32m+[m[32m                                        <span style="font-size:20px; font-weight: 500;"><img src="icons/ball.svg" style="Width: 12px;"> betBonanza</span> &#10003; <span style="font-size:18px; color: gray;">@betBonanza</span>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    <p style="font-size: 14px;">NEW CASTLE vs CHELSEA</p>[m
+[32m+[m[32m                                    <div class="post-content">[m
+[32m+[m[32m                                        Chelse to Win & Total Ocer 2.5goals at 20.00 Odds ( Only on betBonanza) 🔥🔥[m
+[32m+[m[32m                                        <!-- <div class="hash-tags">[m
+[32m+[m[32m                                            <p>[m
+[32m+[m[32m                                                #OPPOReno8[m
+[32m+[m[32m                                            </p>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                            <p>[m
+[32m+[m[32m                                                #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                            </p>[m[41m [m
+[32m+[m[41m                [m
+[32m+[m[32m                                        </div>-->[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                        <div class="post-image-container">[m
+[32m+[m[32m                                            <img class="post-image" src="icons/post1.jpg">[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                            <p style="padding-left:5px; margin-bottom: 10px;"><a href="#">betBonanza.com</a></p>[m
+[32m+[m[32m                                            <p style="padding-left:5px;">Bet Now to Enjoy this Sure 20 Odds AWOOF!</p>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                          <!--<video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                            </video>[m
+[32m+[m[32m                                        <div class="videos">[m
+[32m+[m[32m                                            <div class="video-note">[m
+[32m+[m[32m                                                <p style="color:rgb(200, 200, 200)">[m
+[32m+[m[32m                                                    xpressioncamera.com[m
+[32m+[m[32m                                                </p>[m
+[32m+[m[32m                                               <p>[m
+[32m+[m[32m                                                   Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                               </p>[m[41m [m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div> -->[m
+[32m+[m[41m                                        [m
+[32m+[m[41m                                       [m
+[32m+[m[41m                [m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    <div class="post-stats">[m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Media[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                Poll[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                GIF[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                Emoji[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    <div class="thread">[m
+[32m+[m[32m                                        <a href="#">[m
+[32m+[m[32m                                            Show this thread[m
+[32m+[m[32m                                        </a>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m            [m
+[32m+[m[41m            [m
+[32m+[m[32m                </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                 [m
+[32m+[m[32m            <div class="tweet-1">[m
+[32m+[m[32m                <div class="post-img">[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                    <div>[m
+[32m+[m[32m                        <div class="post-author">[m
+[32m+[m[32m                            <span style="font-size:20px; font-weight: 500;">xpression camera</span> &#10003; <span style="font-size:18px; color: gray;">@xpression_app</span>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-content">[m
+[32m+[m[32m                            No time to get ready for your meeting? Use xpression camera to be dressed for all occasions.[m
+[32m+[m[32m                             <!-- <div class="hash-tags">[m
+[32m+[m[32m                                <p>[m
+[32m+[m[32m                                    #OPPOReno8[m
+[32m+[m[32m                                </p>[m
+[32m+[m[41m    [m
+[32m+[m[32m                                <p>[m
+[32m+[m[32m                                    #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                </p>[m
+[32m+[m[41m    [m
+[32m+[m[32m                            </div> -->[m
+[32m+[m[41m                           [m
+[32m+[m[32m                             <video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                    </video>[m
+[32m+[m[32m                          <div class="videos">[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                <div class="video-note">[m
+[32m+[m[32m                                    <p style="color:rgb(200, 200, 200); margin-bottom: 10px;">[m
+[32m+[m[32m                                        xpressioncamera.com[m
+[32m+[m[32m                                    </p>[m
+[32m+[m[32m                                   <p>[m
+[32m+[m[32m                                       Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                   </p>[m[41m [m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                            [m
+[32m+[m[32m                        <div class="post-stats">[m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                Media[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Poll[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    GIF[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                            <div class="post-icon-container">[m
+[32m+[m[32m                                <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                    Emoji[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="thread">[m
+[32m+[m[32m                            <a href="#">[m
+[32m+[m[32m                                Show this thread[m
+[32m+[m[32m                            </a>[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                 [m
+[32m+[m[32m                        <div class="tweet-1">[m
+[32m+[m[32m                            <div class="post-img">[m
+[32m+[m[32m                                <div>[m
+[32m+[m[32m                                    <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                                </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-portable">[m
+[32m+[m[32m                                    <div class="post-author">[m
+[32m+[m[32m                                        <span style="font-size:20px; font-weight: 500;"><img src="icons/ball.svg" style="Width: 12px;"> betBonanza</span> &#10003; <span style="font-size:18px; color: gray;">@betBonanza</span>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    <p style="font-size: 14px;">NEW CASTLE vs CHELSEA</p>[m
+[32m+[m[32m                                    <div class="post-content">[m
+[32m+[m[32m                                        Chelse to Win & Total Ocer 2.5goals at 20.00 Odds ( Only on betBonanza) 🔥🔥[m
+[32m+[m[32m                                        <!-- <div class="hash-tags">[m
+[32m+[m[32m                                            <p>[m
+[32m+[m[32m                                                #OPPOReno8[m
+[32m+[m[32m                                            </p>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                            <p>[m
+[32m+[m[32m                                                #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                            </p>[m[41m [m
+[32m+[m[41m                [m
+[32m+[m[32m                                        </div>-->[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                        <div class="post-image-container">[m
+[32m+[m[32m                                            <img class="post-image" src="icons/post1.jpg">[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                            <p style="padding-left:5px; margin-bottom: 10px;"><a href="#">betBonanza.com</a></p>[m
+[32m+[m[32m                                            <p style="padding-left:5px;">Bet Now to Enjoy this Sure 20 Odds AWOOF!</p>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                          <!--<video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                            </video>[m
+[32m+[m[32m                                        <div class="videos">[m
+[32m+[m[32m                                            <div class="video-note">[m
+[32m+[m[32m                                                <p style="color:rgb(200, 200, 200)">[m
+[32m+[m[32m                                                    xpressioncamera.com[m
+[32m+[m[32m                                                </p>[m
+[32m+[m[32m                                               <p>[m
+[32m+[m[32m                                                   Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                               </p>[m[41m [m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div> -->[m
+[32m+[m[41m                                        [m
+[32m+[m[41m                                       [m
+[32m+[m[41m                [m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    <div class="post-stats">[m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Media[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                Poll[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                GIF[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                        <div class="post-icon-container">[m
+[32m+[m[32m                                            <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                            <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                Emoji[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    <div class="thread">[m
+[32m+[m[32m                                        <a href="#">[m
+[32m+[m[32m                                            Show this thread[m
+[32m+[m[32m                                        </a>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m            [m
+[32m+[m[41m            [m
+[32m+[m[32m                </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[32m                    <div class="tweet">[m
+[32m+[m[32m                        <div class="favicon-container">[m
+[32m+[m[32m                            <img src="icons/profile image.png" class="favicon">[m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                        <div class="post-id">[m
+[32m+[m[32m                            Friday Anago and Chief follow[m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                    </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                    <div class="tweet-1">[m
+[32m+[m[32m                        <div class="post-img">[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <img class="profile-img" src="icons/profile image.png">[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m                            <div class="img-thread">[m
+[32m+[m[41m            [m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <img class="profile-img-1" src="icons/profile image.png">[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <div class="post-author">[m
+[32m+[m[32m                                    <span style="font-size:20px; font-weight: 500;">O.G.B</span> &#10003; <span style="font-size:18px; color: gray;">@OGBdeyforyou &#183; 18h</span>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-content">[m
+[32m+[m[32m                                    Which Nigerian artiste is best to feature on a song if you're looking for a hit? 🤔[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-stats">[m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                        Media[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Poll[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            GIF[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Emoji[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="thread">[m
+[32m+[m[32m                                    <a href="#">[m
+[32m+[m[32m                                        Show this thread[m
+[32m+[m[32m                                    </a>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                    [m
+[32m+[m[41m                    [m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                         [m
+[32m+[m[32m                    <div class="tweet-1">[m
+[32m+[m[32m                        <div class="post-img">[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <div class="post-author">[m
+[32m+[m[32m                                    <span style="font-size:20px; font-weight: 500;">OPPO Nigeria</span> &#10003; <span style="font-size:18px; color: gray;">@OPPONigeria</span>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-content">[m
+[32m+[m[32m                                    Beauty is a thing to behold, a magic to create and a piece to treasured just like you Reno8.[m
+[32m+[m[32m                                    <div class="hash-tags">[m
+[32m+[m[32m                                        <p>[m
+[32m+[m[32m                                            #OPPOReno8[m
+[32m+[m[32m                                        </p>[m
+[32m+[m[41m            [m
+[32m+[m[32m                                        <p>[m
+[32m+[m[32m                                            #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                        </p>[m
+[32m+[m[41m            [m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-stats">[m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                        Media[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Poll[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            GIF[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Emoji[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="thread">[m
+[32m+[m[32m                                    <a href="#">[m
+[32m+[m[32m                                        Show this thread[m
+[32m+[m[32m                                    </a>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m                    [m
+[32m+[m[41m                    [m
+[32m+[m[32m                        </div>[m
+[32m+[m[41m                    [m
+[32m+[m[32m                </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                         [m
+[32m+[m[32m                    <div class="tweet-1">[m
+[32m+[m[32m                        <div class="post-img">[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <div class="post-author">[m
+[32m+[m[32m                                    <span style="font-size:20px; font-weight: 500;">xpression camera</span> &#10003; <span style="font-size:18px; color: gray;">@xpression_app</span>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-content">[m
+[32m+[m[32m                                    No time to get ready for your meeting? Use xpression camera to be dressed for all occasions.[m
+[32m+[m[32m                                     <!-- <div class="hash-tags">[m
+[32m+[m[32m                                        <p>[m
+[32m+[m[32m                                            #OPPOReno8[m
+[32m+[m[32m                                        </p>[m
+[32m+[m[41m            [m
+[32m+[m[32m                                        <p>[m
+[32m+[m[32m                                            #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                        </p>[m
+[32m+[m[41m            [m
+[32m+[m[32m                                    </div> -->[m
+[32m+[m[41m                                   [m
+[32m+[m[32m                                     <video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                            </video>[m
+[32m+[m[32m                                  <div class="videos">[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                        <div class="video-note">[m
+[32m+[m[32m                                            <p style="color:rgb(200, 200, 200); margin-bottom: 10px;">[m
+[32m+[m[32m                                                xpressioncamera.com[m
+[32m+[m[32m                                            </p>[m
+[32m+[m[32m                                           <p>[m
+[32m+[m[32m                                               Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                           </p>[m[41m [m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                <div class="post-stats">[m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                        Media[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Poll[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            GIF[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Emoji[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="thread">[m
+[32m+[m[32m                                    <a href="#">[m
+[32m+[m[32m                                        Show this thread[m
+[32m+[m[32m                                    </a>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                <div class="row-3">[m
+[32m+[m[41m                         [m
+[32m+[m[32m                                <div class="tweet-1">[m
+[32m+[m[32m                                    <div class="post-img">[m
+[32m+[m[32m                                        <div>[m
+[32m+[m[32m                                            <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                        <div class="post-portable">[m
+[32m+[m[32m                                            <div class="post-author">[m
+[32m+[m[32m                                                <span style="font-size:20px; font-weight: 500;"><img src="icons/ball.svg" style="Width: 12px;"> betBonanza</span> &#10003; <span style="font-size:18px; color: gray;">@betBonanza</span>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <p style="font-size: 14px;">NEW CASTLE vs CHELSEA</p>[m
+[32m+[m[32m                                            <div class="post-content">[m
+[32m+[m[32m                                                Chelse to Win & Total Ocer 2.5goals at 20.00 Odds ( Only on betBonanza) 🔥🔥[m
+[32m+[m[32m                                                <!-- <div class="hash-tags">[m
+[32m+[m[32m                                                    <p>[m
+[32m+[m[32m                                                        #OPPOReno8[m
+[32m+[m[32m                                                    </p>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                                                    <p>[m
+[32m+[m[32m                                                        #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                                    </p>[m[41m [m
+[32m+[m[41m                        [m
+[32m+[m[32m                                                </div>-->[m
+[32m+[m[41m                                                [m
+[32m+[m[32m                                                <div class="post-image-container">[m
+[32m+[m[32m                                                    <img class="post-image" src="icons/post1.jpg">[m
+[32m+[m[41m                                                [m
+[32m+[m[32m                                                    <p style="padding-left:5px; margin-bottom: 10px;"><a href="#">betBonanza.com</a></p>[m
+[32m+[m[32m                                                    <p style="padding-left:5px;">Bet Now to Enjoy this Sure 20 Odds AWOOF!</p>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                                                [m
+[32m+[m[32m                                                  <!--<video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                                    </video>[m
+[32m+[m[32m                                                <div class="videos">[m
+[32m+[m[32m                                                    <div class="video-note">[m
+[32m+[m[32m                                                        <p style="color:rgb(200, 200, 200)">[m
+[32m+[m[32m                                                            xpressioncamera.com[m
+[32m+[m[32m                                                        </p>[m
+[32m+[m[32m                                                       <p>[m
+[32m+[m[32m                                                           Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                                       </p>[m[41m [m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div> -->[m
+[32m+[m[41m                                                [m
+[32m+[m[41m                                               [m
+[32m+[m[41m                        [m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <div class="post-stats">[m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                    Media[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                                            [m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                        Poll[m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                            [m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                        GIF[m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                                            [m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                        Emoji[m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <div class="thread">[m
+[32m+[m[32m                                                <a href="#">[m
+[32m+[m[32m                                                    Show this thread[m
+[32m+[m[32m                                                </a>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[41m                                            [m
+[32m+[m[32m                </div>[m
+[32m+[m[41m                    [m
+[32m+[m[41m                    [m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m        [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                         [m
+[32m+[m[32m                    <div class="tweet-1">[m
+[32m+[m[32m                        <div class="post-img">[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m                            </div>[m
+[32m+[m[32m                            <div>[m
+[32m+[m[32m                                <div class="post-author">[m
+[32m+[m[32m                                    <span style="font-size:20px; font-weight: 500;">xpression camera</span> &#10003; <span style="font-size:18px; color: gray;">@xpression_app</span>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="post-content">[m
+[32m+[m[32m                                    No time to get ready for your meeting? Use xpression camera to be dressed for all occasions.[m
+[32m+[m[32m                                     <!-- <div class="hash-tags">[m
+[32m+[m[32m                                        <p>[m
+[32m+[m[32m                                            #OPPOReno8[m
+[32m+[m[32m                                        </p>[m
+[32m+[m[41m            [m
+[32m+[m[32m                                        <p>[m
+[32m+[m[32m                                            #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                        </p>[m
+[32m+[m[41m            [m
+[32m+[m[32m                                    </div> -->[m
+[32m+[m[41m                                   [m
+[32m+[m[32m                                     <video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                            </video>[m
+[32m+[m[32m                                  <div class="videos">[m
+[32m+[m[41m                                        [m
+[32m+[m[32m                                        <div class="video-note">[m
+[32m+[m[32m                                            <p style="color:rgb(200, 200, 200); margin-bottom: 10px;">[m
+[32m+[m[32m                                                xpressioncamera.com[m
+[32m+[m[32m                                            </p>[m
+[32m+[m[32m                                           <p>[m
+[32m+[m[32m                                               Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                           </p>[m[41m [m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                    [m
+[32m+[m[32m                                <div class="post-stats">[m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                        Media[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Poll[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            GIF[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                                    <div class="post-icon-container">[m
+[32m+[m[32m                                        <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                        <div class="post-icon-tooltip">[m
+[32m+[m[32m                                            Emoji[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                    </div>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[32m                                <div class="thread">[m
+[32m+[m[32m                                    <a href="#">[m
+[32m+[m[32m                                        Show this thread[m
+[32m+[m[32m                                    </a>[m
+[32m+[m[32m                                </div>[m
+[32m+[m[41m                                [m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m        <div class="row-3">[m
+[32m+[m[41m                         [m
+[32m+[m[32m                                <div class="tweet-1">[m
+[32m+[m[32m                                    <div class="post-img">[m
+[32m+[m[32m                                        <div>[m
+[32m+[m[32m                                            <img class="profile-img" src="icons/user.jpg">[m
+[32m+[m[32m                                        </div>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                                        </div>[m
+[32m+[m[32m                                        <div class="post-portable">[m
+[32m+[m[32m                                            <div class="post-author">[m
+[32m+[m[32m                                                <span style="font-size:20px; font-weight: 500;"><img src="icons/ball.svg" style="Width: 12px;"> betBonanza</span> &#10003; <span style="font-size:18px; color: gray;">@betBonanza</span>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <p style="font-size: 14px;">NEW CASTLE vs CHELSEA</p>[m
+[32m+[m[32m                                            <div class="post-content">[m
+[32m+[m[32m                                                Chelse to Win & Total Ocer 2.5goals at 20.00 Odds ( Only on betBonanza) 🔥🔥[m
+[32m+[m[32m                                                <!-- <div class="hash-tags">[m
+[32m+[m[32m                                                    <p>[m
+[32m+[m[32m                                                        #OPPOReno8[m
+[32m+[m[32m                                                    </p>[m
+[32m+[m[41m                        [m
+[32m+[m[32m                                                    <p>[m
+[32m+[m[32m                                                        #MyAutheticSelfInPortrait[m
+[32m+[m[32m                                                    </p>[m[41m [m
+[32m+[m[41m                        [m
+[32m+[m[32m                                                </div>-->[m
+[32m+[m[41m                                                [m
+[32m+[m[32m                                                <div class="post-image-container">[m
+[32m+[m[32m                                                    <img class="post-image" src="icons/post1.jpg">[m
+[32m+[m[41m                                                [m
+[32m+[m[32m                                                    <p style="padding-left:5px; margin-bottom: 10px;"><a href="#">betBonanza.com</a></p>[m
+[32m+[m[32m                                                    <p style="padding-left:5px;">Bet Now to Enjoy this Sure 20 Odds AWOOF!</p>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                                                [m
+[32m+[m[32m                                                  <!--<video src="icons/twitter.mp4" controls>[m
+[32m+[m[32m                                                    </video>[m
+[32m+[m[32m                                                <div class="videos">[m
+[32m+[m[32m                                                    <div class="video-note">[m
+[32m+[m[32m                                                        <p style="color:rgb(200, 200, 200)">[m
+[32m+[m[32m                                                            xpressioncamera.com[m
+[32m+[m[32m                                                        </p>[m
+[32m+[m[32m                                                       <p>[m
+[32m+[m[32m                                                           Become anyone on Zoom, Twitch, or any Streaming video[m
+[32m+[m[32m                                                       </p>[m[41m [m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div> -->[m
+[32m+[m[41m                                                [m
+[32m+[m[41m                                               [m
+[32m+[m[41m                        [m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <div class="post-stats">[m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/gallery.svg">1,036[m
+[32m+[m[32m                                                <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                    Media[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                                            [m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/poll.svg">291[m
+[32m+[m[32m                                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                        Poll[m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                            [m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/GIF.svg">5,471[m
+[32m+[m[32m                                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                        GIF[m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[41m                                            [m
+[32m+[m[32m                                                <div class="post-icon-container">[m
+[32m+[m[32m                                                    <img class="post-icon" src="icons/smiley.svg">[m
+[32m+[m[32m                                                    <div class="post-icon-tooltip">[m
+[32m+[m[32m                                                        Emoji[m
+[32m+[m[32m                                                    </div>[m
+[32m+[m[32m                                                </div>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[32m                                            <div class="thread">[m
+[32m+[m[32m                                                <a href="#">[m
+[32m+[m[32m                                                    Show this thread[m
+[32m+[m[32m                                                </a>[m
+[32m+[m[32m                                            </div>[m
+[32m+[m[41m                                            [m
+[32m+[m[32m                </div>[m
+[32m+[m[41m                    [m
+[32m+[m[41m                    [m
+[32m+[m[32m                        </div>[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        <aside class="aside-container">[m
+[32m+[m[32m            <div class="search-container">[m
+[32m+[m[32m                <input type="text" class="search" placeholder="Search Twitter">[m
+[32m+[m[32m                <div class="search-icon-container">[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend">[m
+[32m+[m[32m                <P class="trends">[m
+[32m+[m[32m                   Trends for you[m
+[32m+[m[32m                </P>[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Rufai[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[41m                    [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                #7UpBeYou[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-caption">[m
+[32m+[m[32m                7Up Fido Dido is back with a new message; Be You, Nothing Sure Pass.[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[41m            [m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                4,745 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Alex Otti[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                6,036 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        <div class="top-trend">[m
+[32m+[m[32m            <div class="trend-heading">[m
+[32m+[m[32m                <div class="trend-topic">[m
+[32m+[m[32m                    Trending in Nigeria[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m                <div>[m
+[32m+[m[32m                    <svg viewBox="0 0 24 24" aria-hidden="true" class="trend-more"><g><path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path></g></svg>[m
+[32m+[m[32m                </div>[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m            [m
+[32m+[m[32m            <div class="trend-author">[m
+[32m+[m[32m                Prof Gregory Ibe[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m            <div class="trend-stats">[m
+[32m+[m[32m                1,052 Tweets[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </div>[m
+[32m+[m[41m                [m
+[32m+[m[32m            </div>[m
+[32m+[m
+[32m+[m[32m            <div class="suggest-follower">[m
+[32m+[m
+[32m+[m[32m                <p class="who">[m
+[32m+[m[32m                    Who to follow[m
+[32m+[m[32m                </p>[m
+[32m+[m[32m                <div class="follow">[m
+[32m+[m
+[32m+[m[32m                    <div class="follow-pics">[m
+[32m+[m[32m                        <img class="follow-pic"src="icons/profile1.jpg">[m
+[32m+[m[32m                    </div>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m                    <div class="follower-name">[m
+[32m+[m[32m                        Mohammed Al-Iss...[m
+[32m+[m[32m                        <p>@MhmdAlissa</p>[m
+[32m+[m[32m                        <p>Promoted</p>[m
+[32m+[m[32m                    </div>[m
+[32m+[m
+[32m+[m[32m                    <div class="follow-button">[m
+[32m+[m[32m                        Follow[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m
+[32m+[m[32m                <div class="follow">[m
+[32m+[m
+[32m+[m[32m                    <div class="follow-pics">[m
+[32m+[m[32m                        <img class="follow-pic"src="icons/profile2.jpeg">[m
+[32m+[m[32m                    </div>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m                    <div class="follower-name">[m
+[32m+[m[32m                        Your View on TVC[m
+[32m+[m[32m                        <p>@YourViewTVC</p>[m
+[32m+[m[32m                        <p>Promoted</p>[m
+[32m+[m[32m                    </div>[m
+[32m+[m
+[32m+[m[32m                    <div class="follow-button">[m
+[32m+[m[32m                        Follow[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m
+[32m+[m[32m                <div class="follow">[m
+[32m+[m
+[32m+[m[32m                    <div class="follow-pics">[m
+[32m+[m[32m                        <img class="follow-pic"src="icons/profile3.jpg">[m
+[32m+[m[32m                    </div>[m
+[32m+[m
+[32m+[m
+[32m+[m[32m                    <div class="follower-name">[m
+[32m+[m[32m                        TVC[m
+[32m+[m[32m                        <p>@TVCconnect</p>[m
+[32m+[m[32m                        <!-- <p>Promoted</p> -->[m
+[32m+[m[32m                    </div>[m
+[32m+[m
+[32m+[m[32m                    <div class="follow-button">[m
+[32m+[m[32m                        Follow[m
+[32m+[m[32m                    </div>[m
+[32m+[m[32m                </div>[m
+[32m+[m
+[32m+[m[41m                [m
+[32m+[m[41m            [m
+[32m+[m
+[32m+[m[32m            </div>[m
+[32m+[m[41m    [m
+[32m+[m[32m        </aside>[m
+[32m+[m[32m    </div>[m
+[32m+[m
+[32m+[m[41m [m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
