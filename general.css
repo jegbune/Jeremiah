@@ -319,12 +319,13 @@ video{
 
 
 
-@media (max-width: 800px){
+@media (max-width: 900px){
 	body{
 		margin-right: 0;
 		margin-left:71px;
 		margin-bottom: 51px;
 	}
+	
 	.home{
 		left:71px;
 		width: calc(100% - 70px);
