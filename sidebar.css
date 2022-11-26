@@ -119,6 +119,7 @@
         margin:0 0 0 80px;
         padding-right: 0;
         height:100%;
+        flex-grow: 1;
     }
     .sidebar-top, .sidebar-9{
         display:flex;

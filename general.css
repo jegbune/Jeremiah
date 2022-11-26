@@ -322,14 +322,15 @@ video{
 @media (max-width: 900px){
 	body{
 		margin-right: 0;
-		margin-left:140px;
+		margin-left:150px;
 		margin-bottom: 51px;
 	}
 	
 	.home{
 		left:71px;
-		width: 597px;
-		margin:0;
+		width: 596px;
+		margin:0 0 0 80px;
+		border-width: 0 1px 0 0;
 	}
 	.section{
 		margin-left: 0px;
