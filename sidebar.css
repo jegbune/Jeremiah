@@ -112,7 +112,7 @@
 @media (max-width:900px){
     .sidebar{
         max-width: 70px;
-        overflow-y: hidden;
+        overflow: hidden;
         display:flex;
         align-items: center;
         justify-content: space-between;
@@ -120,7 +120,7 @@
         padding-right: 0;
         height:100%;
     }
-    .sidebar-top{
+    .sidebar-top, .sidebar-9{
         display:flex;
         justify-content: center;
         align-items: center;

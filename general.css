@@ -322,26 +322,26 @@ video{
 @media (max-width: 900px){
 	body{
 		margin-right: 0;
-		margin-left:71px;
+		margin-left:140px;
 		margin-bottom: 51px;
 	}
 	
 	.home{
 		left:71px;
-		width: calc(100% - 70px);
+		width: 597px;
 		margin:0;
 	}
 	.section{
 		margin-left: 0px;
 		padding:0;
-		width: 100%;
+		width: 598px;
 		margin-top: 53px;
 		display: flex;
 	}
 	.middle-section{
 		margin: 0;
 		padding:0;
-		width: 100%;
+		width: 598px;
 	
 
 	}
